@@ -1,0 +1,55 @@
+<%- include('./includes/head.ejs') %>
+
+  <%- include('./includes/navigation.ejs') %>
+
+    <section class="section results__section">
+
+      <% if (searchQuery && searchQuery.trim() !=='' ) { %>
+        <h1 class="results__title">Wyniki dla wyszukiwania:</h1>
+        <h1 class="results__query">
+          <%= searchQuery %>
+        </h1>
+
+        <% } else { %>
+          <h1 class="results__title">Wyniki dla wyszukiwania:</h1>
+          <h1 class="results__query">Wszystkie śmieci!</h1>
+          <% } %>
+
+
+
+            <div class="results__wrapper">
+
+              <% if (items.length> 0) { %>
+                <ul class="results__ul">
+                  <% items.forEach(item=> { %>
+                    <li class="results__item">
+                      <div class="results__item--imgWrapper">
+                        <div class="results__item--imgShadow"></div>
+                        <img class="results__item--img" src="<%= item.imageUrl %>" alt="<%= item.itemName %>">
+                      </div>
+
+                      <div class="results__item--textWrapper">
+                        <h2 class="results__item--name">
+                          <%= item.itemName %>
+                        </h2>
+                        <p class="results__item--type"><span class="results__span">Typ: </span>
+                          <%= item.itemType %>
+                        </p>
+                        <p class="results__item--description"><span class="results__span">Opis: </span>
+                          <%= item.description %>
+                        </p>
+                      </div>
+                    </li>
+                    <% }) %>
+                </ul>
+                <% } else { %>
+                  <h3 class="results__nothing">Niestety nic nie znaleziono</h3>
+                  <h3 class="results__nothing">Spróbuj innych słów kluczowych</h3>
+                  <% } %>
+
+
+            </div>
+
+    </section>
+
+    <%- include('./includes/footer.ejs') %>

@@ -1,5 +1,9 @@
 const Item = require('../models/itemModels')
 
+
+
+// Testowy controller żeby sprwdzić czy działa połączenie z bazą
+
 exports.addItem = (req, res, next) => {
 	const newItem = new Item({
 		itemName: 'Butelka plastikowa',

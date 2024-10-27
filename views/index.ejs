@@ -1,7 +1,17 @@
 <%- include('./includes/head.ejs') %>
 
-  <header>
-    <p class="test">jakis test</p>
-  </header>
+  <%- include('./includes/navigation.ejs') %>
 
-  <%- include('./includes/footer.ejs') %>
+
+    <main class="main">
+      <section class="section search__section">
+
+        <form class="search__wrapper" action="/search" method="GET">
+          <input type="text" class="search__input" placeholder="Podaj słowa kluczowe..." name="q">
+          <button class="search__button" type="submit">Wyszukaj</button>
+        </form>
+
+      </section>
+    </main>
+
+    <%- include('./includes/footer.ejs') %>

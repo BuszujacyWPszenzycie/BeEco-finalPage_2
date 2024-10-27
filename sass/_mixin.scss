@@ -1,0 +1,16 @@
+@use 'colors' as *;
+
+@mixin basicSearchInputAndButton {
+	margin: 2rem;
+	border: none;
+	background-color: $white;
+	width: 60vw;
+	height: 40px;
+	font-family: inherit;
+	transition: background-color 0.4s, color 0.4s;
+}
+
+@mixin smallSearchInputAndButton {
+	font-size: 1.5rem;
+	height: 50px;
+}

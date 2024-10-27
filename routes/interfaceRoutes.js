@@ -6,4 +6,6 @@ const interfaceController = require('../controllers/interfaceController')
 
 router.get('/', interfaceController.getIndex)
 
+router.get('/search', interfaceController.searchItems)
+
 module.exports = router

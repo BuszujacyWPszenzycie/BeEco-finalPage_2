@@ -1,3 +1,6 @@
+@use 'colors' as *;
+@use 'mixin' as *;
+
 *,
 *::before,
 *::after {
@@ -14,4 +17,246 @@ html {
 body {
 	font-size: 1rem;
 	font-family: 'Jura', serif;
+	background-image: linear-gradient(220.55deg, $yellow 0%, $orange 100%);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	min-height: 100vh;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
+
+// NAVIGATION
+
+.nav {
+	&__mobile {
+		max-height: 25vh;
+		display: flex;
+		justify-content: flex-end;
+
+		&--item {
+			padding: 3rem;
+			list-style-type: none;
+		}
+		&--link {
+			text-decoration: none;
+		}
+		&--icon {
+			font-size: 4rem;
+			text-decoration: none;
+			color: $gray;
+		}
+	}
+}
+
+// SEARCH
+
+.search {
+	&__section {
+		height: 60vh;
+		max-width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__input {
+		@include basicSearchInputAndButton;
+		padding: 2rem;
+		&:focus {
+			outline: none;
+			background-color: $gray;
+			color: $white;
+		}
+	}
+
+	&__button {
+		@include basicSearchInputAndButton;
+		text-transform: uppercase;
+		cursor: pointer;
+		&:hover {
+			background-color: $gray;
+			color: $white;
+		}
+	}
+}
+
+// LOGIN
+
+.login {
+	&__section {
+		height: 60vh;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	&__p {
+		padding: 2rem;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 2.5rem;
+	}
+}
+
+// RESULTS
+
+.results {
+	&__section {
+		width: 100vw;
+		min-height: 60vh;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		flex-direction: column;
+		background-color: $white;
+	}
+
+	&__title {
+		margin: 2rem;
+		font-size: 2rem;
+		text-align: center;
+	}
+
+	&__query {
+		font-size: 2.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+		word-break: break-all; /* Breaks long words at any character */
+		overflow-wrap: break-word; /* Ensures that long words can wrap onto the next line */
+		color: $red;
+		margin-bottom: 3rem;
+	}
+
+	&__nothing {
+		text-align: center;
+		margin: 2rem;
+		font-size: 1.5rem;
+	}
+
+	&__item {
+		width: 270px;
+		height: 400px;
+		// min-height: 100%;
+		margin: 2rem;
+		transition: transform 0.4s, box-shadow 0.4s;
+		box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.3);
+		margin-bottom: 4rem;
+		list-style: none;
+		&:hover {
+			transform: scale(1.05);
+			box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.5);
+		}
+
+		&--imgWrapper {
+			width: 100%;
+			height: 50%;
+			overflow: hidden;
+			position: relative;
+		}
+
+		&--img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&--imgShadow {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			z-index: 1;
+		}
+
+		&--textWrapper {
+			width: 100%;
+			min-height: 50%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		&--name {
+			font-size: 1.5rem;
+			margin: 1rem;
+		}
+
+		&--type {
+			font-size: 1.2rem;
+			margin: 1rem;
+		}
+
+		&--description {
+			font-size: 1.2rem;
+			margin: 1rem;
+		}
+	}
+
+	&__span {
+		font-weight: bold;
+	}
+}
+
+// FOOTER
+.footer {
+	height: 20vh;
+	width: 100vw;
+	background-color: $gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	&__iconsWrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__icon {
+		font-size: 5rem;
+		color: $white;
+		padding: 2rem;
+		cursor: pointer;
+		transition: transform 0.4s;
+		&:hover {
+			transform: scale(1.05);
+		}
+	}
+
+	&__textWrapper {
+		text-align: center;
+		line-height: 1.6;
+		margin: 1rem;
+	}
+
+	&__span {
+		color: $red;
+		font-weight: bold;
+	}
+
+	&__text {
+		font-size: 1rem;
+		color: $white;
+		text-decoration: none;
+	}
+}
+
+// MEDIA
+
+@import './_small';
+@import './_medium';
+@import './_large';
+@import './_xlarge';

@@ -1,0 +1,69 @@
+@use 'colors' as *;
+@use 'mixin' as *;
+
+@media (min-width: 576px) {
+	.nav {
+		&__mobile {
+			&--item {
+				padding: 3.5rem;
+			}
+			&--icon {
+				font-size: 4.5rem;
+			}
+		}
+	}
+
+	.results {
+		&__title {
+			margin: 2.5rem;
+			font-size: 2.5rem;
+		}
+
+		&__query {
+			font-size: 3rem;
+			margin-bottom: 3.5rem;
+		}
+
+		&__item {
+			width: 300px;
+			height: 430px;
+			margin: 2.5rem;
+			margin-bottom: 5rem;
+
+			&--name {
+				font-size: 1.8rem;
+				margin: 1.3rem;
+			}
+
+			&--type {
+				font-size: 1.4rem;
+				margin: 1.3rem;
+			}
+
+			&--description {
+				font-size: 1.4rem;
+				margin: 1.3rem;
+			}
+		}
+	}
+
+	.search {
+		&__input {
+			@include smallSearchInputAndButton;
+		}
+
+		&__button {
+			@include smallSearchInputAndButton;
+		}
+	}
+
+	.footer {
+		&__icon {
+			font-size: 5.5rem;
+		}
+
+		&__text {
+			font-size: 1.2rem;
+		}
+	}
+}
