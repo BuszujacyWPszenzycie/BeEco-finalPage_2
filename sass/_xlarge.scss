@@ -1,2 +1,8 @@
+// _xlarge.scss
 @media (min-width: 1200px) {
+	.results {
+		&__item {
+			width: 400px;
+		}
+	}
 }
