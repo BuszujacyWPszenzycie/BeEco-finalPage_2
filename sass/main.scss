@@ -131,7 +131,7 @@ body {
 		text-transform: uppercase;
 		word-break: break-all;
 		overflow-wrap: break-word;
-		color: $red;
+		color: $orange;
 		margin-bottom: 3rem;
 	}
 
@@ -203,6 +203,21 @@ body {
 			word-wrap: break-word;
 			overflow-wrap: break-word;
 		}
+	}
+}
+
+// PAGINATION
+
+.pagination {
+	margin: 3rem;
+	font-size: 1.5rem;
+	&__link {
+		text-decoration: none;
+		color: $gray;
+	}
+
+	&__current {
+		color: $orange;
 	}
 }
 

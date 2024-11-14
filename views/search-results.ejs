@@ -50,6 +50,22 @@
 
             </div>
 
+            <!-- Pagination -->
+            <div class="pagination">
+              <% if (currentPage> 1) { %>
+                <a href="?q=<%= searchQuery %>&page=<%= currentPage - 1 %>" class="pagination__link">Poprzednia &larr;
+                </a>
+                <% } %>
+
+                  <span class="pagination__current">Strona <%= currentPage %> z <%= totalPages %></span>
+
+                  <% if (currentPage < totalPages) { %>
+                    <a href="?q=<%= searchQuery %>&page=<%= currentPage + 1 %>" class="pagination__link">
+                      &rarr; Następna </a>
+                    <% } %>
+            </div>
+
+
     </section>
 
     <%- include('./includes/footer.ejs') %>
