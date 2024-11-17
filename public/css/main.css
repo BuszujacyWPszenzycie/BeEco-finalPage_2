@@ -323,10 +323,14 @@ body {
     font-size: 2rem;
     height: 60px;
   }
-  .footer__icon {
+  .pagination {
+    margin: 5rem;
+    font-size: 2rem;
+  }
+  .pagination .footer__icon {
     font-size: 6rem;
   }
-  .footer__text {
+  .pagination__text {
     font-size: 1.4rem;
   }
 }

@@ -10,7 +10,7 @@ exports.getIndex = (req, res, next) => {
 exports.searchItems = (req, res, next) => {
 	const searchQuery = req.query.q // Get the search query from the URL
 	const page = parseInt(req.query.page) || 1 // Get the current page from the URL, default to 1
-	const limit = 2 // Number of items per page
+	const limit = 3 // Number of items per page
 	const skip = (page - 1) * limit // Calculate the number of items to skip
 
 	// If search query is empty or not provided, return all items
