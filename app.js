@@ -1,49 +1,39 @@
 const path = require('path')
+const fs = require('fs')
+
 const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
+const helmet = require('helmet')
+const compression = require('compression')
+const morgan = require('morgan')
 
 const app = express()
 
-const MONGODB_URI = 'mongodb+srv://buszujacywpszenzycie:HhoGtbZhdCNrMm@cluster0.hbc0z1i.mongodb.net/beeco'
+const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.hbc0z1i.mongodb.net/${process.env.MONGO_DATABASE}`
+
+// USER: buszujacywpszenzycie
+// PASSWORD: HhoGtbZhdCNrMm
+// DATABASE: beeco
 
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 
-const adminRoutes = require('./routes/adminRoutes')
 const interfaceRoutes = require('./routes/interfaceRoutes')
-const authRoutes = require('./routes/authRoutes')
+
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+
+app.use(helmet())
+app.use(compression())
+app.use(morgan('combined', { stream: accessLogStream }))
 
 // Do momentu kiedy ten routes jest pusty musi być zakomentowany
-app.use('/admin', adminRoutes)
 app.use(interfaceRoutes)
-app.use(authRoutes)
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 
 const PORT = process.env.PORT || 3000
-
-// app.listen(PORT, () => {
-// 	console.log(`Server is running on http://localhost:${PORT}`)
-// })
-
-// Łączenie się do serwera lokalnego
-
-// mongoose
-// 	.connect('mongodb://localhost:27017/BeEco')
-// 	.then(() => {
-// 		// Start the server once connected to the database
-// 		const PORT = process.env.PORT || 3000
-// 		app.listen(PORT, () => {
-// 			console.log(`Server is running on http://localhost:${PORT}`)
-// 		})
-// 	})
-// 	.catch(err => {
-// 		console.error('MongoDB connection error:', err)
-// 	})
-
-// Łączenie się do serwera online
 
 mongoose
 	.connect(MONGODB_URI)

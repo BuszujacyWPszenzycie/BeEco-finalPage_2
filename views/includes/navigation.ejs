@@ -3,6 +3,23 @@
     <li class="nav__mobile--item">
 
 
+      <a href="/" class="nav__mobile--link">
+        <% if (path=="/" ) { %>
+          <i class="ph ph-recycle nav__mobile--icon"></i>
+          <% } else { %>
+            <i class="ph ph-arrow-left nav__mobile--icon"></i>
+            <% } %>
+      </a>
+
+      <!-- <i class="fa-solid fa-leaf nav__mobile--icon"></i> -->
+      <!-- 
+      <a href="<%= path === '/search' ? '/' : (path !== '/login' ? '/login' : '/') %>" class="nav__mobile--link">
+        <i
+          class="ph <%= path === '/search' || path === '/login' ? 'ph-arrow-left' : 'ph-user' %> nav__mobile--icon"></i>
+      </a> -->
+
+      <!-- <i class="fa-solid fa-arrow-left"></i> -->
+
     </li>
 
   </ul>

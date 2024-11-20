@@ -1,0 +1,2 @@
+::1 - - [20/Nov/2024:17:32:44 +0000] "GET / HTTP/1.1" 304 - "http://localhost:3000/search?q=plastik" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"
+::1 - - [20/Nov/2024:17:32:44 +0000] "GET /css/main.css HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"

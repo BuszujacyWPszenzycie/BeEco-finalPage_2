@@ -46,6 +46,11 @@ body {
 			font-size: 4rem;
 			text-decoration: none;
 			color: $gray;
+			cursor: pointer;
+			transition: transform 0.4s;
+			&:hover {
+				transform: scale(1.05);
+			}
 		}
 	}
 }

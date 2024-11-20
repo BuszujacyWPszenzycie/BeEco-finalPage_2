@@ -40,6 +40,11 @@ body {
   font-size: 4rem;
   text-decoration: none;
   color: #2f4858;
+  cursor: pointer;
+  transition: transform 0.4s;
+}
+.nav__mobile--icon:hover {
+  transform: scale(1.05);
 }
 
 .search__section {
@@ -342,6 +347,9 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .nav__mobile--icon {
+    font-size: 7rem;
+  }
   .results__item {
     width: 400px;
   }
