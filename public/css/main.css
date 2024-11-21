@@ -24,13 +24,6 @@ body {
   justify-content: space-between;
 }
 
-input,
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
-}
-
 .nav__mobile {
   max-height: 25vh;
   display: flex;
@@ -72,6 +65,7 @@ button {
   margin: 2rem;
   border: none;
   background-color: #f5f7f8;
+  color: #2f4858;
   width: 60vw;
   height: 40px;
   font-family: inherit;
@@ -87,6 +81,7 @@ button {
   margin: 2rem;
   border: none;
   background-color: #f5f7f8;
+  color: #2f4858;
   width: 60vw;
   height: 40px;
   font-family: inherit;
@@ -227,6 +222,14 @@ button {
   font-size: 1rem;
   color: #f5f7f8;
   text-decoration: none;
+}
+
+input,
+button {
+  -webkit-appearance: none; /* Removes default styles in Safari */
+  -moz-appearance: none;
+       appearance: none; /* Ensures consistent styles across browsers */
+  border-radius: 0; /* Set this to the desired value, e.g., 5px */
 }
 
 @media (min-width: 576px) {

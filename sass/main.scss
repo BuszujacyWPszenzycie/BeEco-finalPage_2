@@ -27,12 +27,6 @@ body {
 	justify-content: space-between;
 }
 
-input,
-button {
-	-webkit-appearance: none;
-	appearance: none;
-}
-
 // NAVIGATION
 
 .nav {
@@ -280,6 +274,13 @@ button {
 		color: $white;
 		text-decoration: none;
 	}
+}
+
+input,
+button {
+	-webkit-appearance: none; /* Removes default styles in Safari */
+	appearance: none; /* Ensures consistent styles across browsers */
+	border-radius: 0; /* Set this to the desired value, e.g., 5px */
 }
 
 // MEDIA
