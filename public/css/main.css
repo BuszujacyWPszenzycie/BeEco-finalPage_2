@@ -24,6 +24,13 @@ body {
   justify-content: space-between;
 }
 
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+
 .nav__mobile {
   max-height: 25vh;
   display: flex;

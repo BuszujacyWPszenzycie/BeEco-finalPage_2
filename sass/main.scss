@@ -27,6 +27,12 @@ body {
 	justify-content: space-between;
 }
 
+input,
+button {
+	-webkit-appearance: none;
+	appearance: none;
+}
+
 // NAVIGATION
 
 .nav {
