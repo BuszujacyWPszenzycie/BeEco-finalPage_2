@@ -12,10 +12,6 @@ const app = express()
 
 const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.hbc0z1i.mongodb.net/${process.env.MONGO_DATABASE}`
 
-// USER: buszujacywpszenzycie
-// PASSWORD: HhoGtbZhdCNrMm
-// DATABASE: beeco
-
 app.set('view engine', 'ejs')
 app.set('views', 'views')
 
@@ -23,7 +19,16 @@ const interfaceRoutes = require('./routes/interfaceRoutes')
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
-app.use(helmet())
+app.use(
+	helmet({
+		contentSecurityPolicy: {
+			directives: {
+				defaultSrc: ["'self'"],
+				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
+			},
+		},
+	})
+)
 app.use(compression())
 app.use(morgan('combined', { stream: accessLogStream }))
 
