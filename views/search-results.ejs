@@ -23,11 +23,6 @@
                 <ul class="results__ul">
                   <% items.forEach(item=> { %>
                     <li class="results__item">
-                      <div class="results__item--imgWrapper">
-                        <div class="results__item--imgShadow"></div>
-                        <img class="results__item--img" src="<%= item.imageUrl %>" alt="<%= item.itemName %>">
-                      </div>
-
                       <div class="results__item--textWrapper">
                         <h2 class="results__item--name">
                           <%= item.itemName %>
