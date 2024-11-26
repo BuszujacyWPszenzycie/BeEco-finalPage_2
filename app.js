@@ -24,8 +24,9 @@ app.use(
 		contentSecurityPolicy: {
 			directives: {
 				defaultSrc: ["'self'"],
-				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
-				imgSrc: ["'self'", 'https://lezebre.lu'],
+				scriptSrc: ["'self'", 'https://unpkg.com'],
+				styleSrc: ["'self'", "'unsafe-inline'"], // Allow inline styles
+				imgSrc: ["'self'", 'https://lezebre.lu'],// Allow scripts from unpkg
 			},
 		},
 	})
