@@ -276,6 +276,69 @@ body {
 	}
 }
 
+// COOKIE
+
+.hide {
+	display: none;
+}
+
+.cookie {
+	&__box {
+		position: fixed;
+		bottom: 0;
+		height: 20vh;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 2rem;
+		font-size: 2rem;
+		background-color: $white;
+		opacity: 0;
+		transform: translateY(100%);
+		z-index: 5;
+		animation: show-cookies 0.5s 0.5s forwards;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: -140px;
+			right: 50px;
+			width: 200px;
+			height: 200px;
+			background-image: url('https://lezebre.lu/images/detailed/26/65626-JDM-Cookie-Monster.png');
+			background-size: cover;
+		}
+	}
+
+	&__btn {
+		margin-top: 1em;
+		padding: 0.5em 1em;
+		font-size: 1.6rem;
+		width: 15vw;
+		min-width: 100px;
+		border: 2px solid $cookie-black;
+		color: $white;
+		background-color: $cookie-blue;
+		transition: background-color 0.3s;
+		font-family: inherit;
+		cursor: pointer;
+		&:hover {
+			background-color: $cookie-blue-hover;
+		}
+	}
+}
+
+// ANIMATIONS
+
+@keyframes show-cookies {
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
 input,
 button {
 	-webkit-appearance: none; /* Removes default styles in Safari */
