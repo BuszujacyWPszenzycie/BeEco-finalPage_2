@@ -19,18 +19,19 @@ const interfaceRoutes = require('./routes/interfaceRoutes')
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
-app.use(
-	helmet({
-		contentSecurityPolicy: {
-			directives: {
-				defaultSrc: ["'self'"],
-				scriptSrc: ["'self'", 'https://unpkg.com'],
-				styleSrc: ["'self'", "'unsafe-inline'"], // Allow inline styles
-				imgSrc: ["'self'", 'https://lezebre.lu'],// Allow scripts from unpkg
-			},
-		},
-	})
-)
+// app.use(
+// 	helmet({
+// 		contentSecurityPolicy: {
+// 			directives: {
+// 				defaultSrc: ["'self'"],
+// 				scriptSrc: ["'self'", 'https://unpkg.com'],
+// 				// styleSrc: ["'self'", "'unsafe-inline'"],
+// 				imgSrc: ["'self'", 'https://lezebre.lu'], // Allow scripts from unpkg
+// 			},
+// 		},
+// 	})
+// )
+
 app.use(compression())
 app.use(morgan('combined', { stream: accessLogStream }))
 
