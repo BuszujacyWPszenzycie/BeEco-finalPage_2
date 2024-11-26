@@ -20,7 +20,27 @@
 
 </footer>
 
-<script src="/js/script.js"></script>
+<script nonce="<%= nonce %>">
+  document.addEventListener('DOMContentLoaded', () => {
+    const cookieBox = document.querySelector('.cookie__box');
+    const cookieBtn = document.querySelector('.cookie__btn');
+
+    const showCookie = () => {
+      const cookieAccepted = localStorage.getItem('cookieAccepted');
+      if (!cookieAccepted) {
+        cookieBox.classList.add('show');
+      }
+    };
+
+    const handleCookieAccept = () => {
+      localStorage.setItem('cookieAccepted', 'true');
+      cookieBox.classList.remove('show');
+    };
+
+    cookieBtn.addEventListener('click', handleCookieAccept);
+    showCookie();
+  });
+</script>
 </body>
 
 </html>

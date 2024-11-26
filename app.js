@@ -19,12 +19,19 @@ const interfaceRoutes = require('./routes/interfaceRoutes')
 
 const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
 
+app.use((req, res, next) => {
+	// Generate a random nonce
+	res.locals.nonce = Buffer.from(new Date().toISOString()).toString('base64')
+	next()
+})
+
 app.use(
 	helmet({
 		contentSecurityPolicy: {
 			directives: {
 				defaultSrc: ["'self'"],
-				scriptSrc: ["'self'", 'https://unpkg.com'],
+				scriptSrc: ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`],
+				styleSrc: ["'self'", "'unsafe-inline'"],
 				imgSrc: ["'self'", 'https://lezebre.lu'], // Allow scripts from unpkg
 			},
 		},
