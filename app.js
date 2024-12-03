@@ -25,14 +25,17 @@ app.use((req, res, next) => {
 	next()
 })
 
+// app.use(helmet(
+
+// ))
+
 app.use(
 	helmet({
 		contentSecurityPolicy: {
 			directives: {
 				defaultSrc: ["'self'"],
-				scriptSrc: ["'self'", (req, res) => `'nonce-${res.locals.nonce}'`],
-				styleSrc: ["'self'", "'unsafe-inline'"],
-				imgSrc: ["'self'", 'https://lezebre.lu'], // Allow scripts from unpkg
+				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
+				imgSrc: ["'self'", 'https://lezebre.lu'],
 			},
 		},
 	})
