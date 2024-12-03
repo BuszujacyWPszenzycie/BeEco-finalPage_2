@@ -332,6 +332,18 @@ body {
 	display: none;
 }
 
+body {
+	.cookie__box {
+		&:not(.hide) {
+			display: flex !important;
+		}
+
+		&.hide {
+			display: none !important;
+		}
+	}
+}
+
 // ANIMATIONS
 
 @keyframes show-cookies {

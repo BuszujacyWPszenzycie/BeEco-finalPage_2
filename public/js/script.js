@@ -9,7 +9,6 @@ const showCookie = () => {
 }
 
 const handleCookieBox = () => {
-	console.log('działa?')
 	localStorage.setItem('cookie', 'true')
 	cookieBox.classList.add('hide')
 }

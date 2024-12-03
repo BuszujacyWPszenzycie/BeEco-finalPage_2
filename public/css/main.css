@@ -274,6 +274,13 @@ body {
   display: none;
 }
 
+body .cookie__box:not(.hide) {
+  display: flex !important;
+}
+body .cookie__box.hide {
+  display: none !important;
+}
+
 @keyframes show-cookies {
   to {
     opacity: 1;
