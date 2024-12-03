@@ -41,10 +41,21 @@
 				font-size: 1.6rem;
 				margin: 1.6rem;
 			}
+			&--localization {
+				font-size: 1.6rem;
+				margin: 1.6rem;
+			}
 		}
 	}
 
 	.search {
+		&__title {
+			font-size: 1.9rem;
+		}
+
+		&__subtitle {
+			font-size: 1.7rem;
+		}
 		&__input {
 			@include mediumSearchInputAndButton;
 		}

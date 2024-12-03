@@ -25,21 +25,6 @@ app.use((req, res, next) => {
 	next()
 })
 
-// app.use(
-// 	helmet({
-// 		contentSecurityPolicy: {
-// 			directives: {
-// 				defaultSrc: ["'self'"],
-// 				styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'unpkg.com'],
-// 				fontSrc: ["'self'", 'fonts.gstatic.com', 'unpkg.com'],
-// 				scriptSrc: ["'self'", 'unpkg.com', "'unsafe-inline'"],
-// 				connectSrc: ["'self'", 'unpkg.com'],
-// 				imgSrc: ["'self'", 'data:', 'unpkg.com', 'lezebre.lu'],
-// 			},
-// 		},
-// 	})
-// )
-
 app.use(
 	helmet({
 		contentSecurityPolicy: {

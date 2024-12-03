@@ -31,7 +31,8 @@ body {
 
 .nav {
 	&__mobile {
-		max-height: 25vh;
+		// max-height: 25vh;
+		min-height: 20vh;
 		display: flex;
 		justify-content: flex-end;
 
@@ -65,12 +66,29 @@ body {
 		height: 60vh;
 		max-width: 100vw;
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 	}
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
+	}
+
+	&__title {
+		text-wrap: wrap;
+		text-align: center;
+		color: $navy;
+		margin: 3rem;
+		font-size: 1.5rem;
+	}
+
+	&__subtitle {
+		text-wrap: wrap;
+		text-align: center;
+		color: $navy;
+		margin: 3rem;
+		font-size: 1.3rem;
 	}
 
 	&__input {
@@ -163,32 +181,6 @@ body {
 			box-shadow: 8px 8px 8px 5px rgba(0, 0, 0, 0.5);
 		}
 
-		// &--imgWrapper {
-		// 	width: 100%;
-		// 	height: auto;
-		// 	position: relative;
-		// 	overflow: hidden;
-		// 	max-height: 200px; // Set a maximum height for the image container
-		// 	flex-shrink: 0; // Prevent the image from shrinking
-		// }
-
-		// &--img {
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	object-fit: cover;
-		// 	position: relative;
-		// }
-
-		// &--imgShadow {
-		// 	position: absolute;
-		// 	top: 0;
-		// 	left: 0;
-		// 	width: 100%;
-		// 	height: 100%;
-		// 	background-color: rgba(0, 0, 0, 0.5);
-		// 	z-index: 1;
-		// }
-
 		&--textWrapper {
 			width: 100%;
 			display: flex;
@@ -211,6 +203,11 @@ body {
 			word-wrap: break-word;
 			overflow-wrap: break-word;
 		}
+
+		&--localization {
+			font-size: 1.2rem;
+			margin-bottom: 0.5rem;
+		}
 	}
 }
 
@@ -231,7 +228,7 @@ body {
 
 // FOOTER
 .footer {
-	height: 20vh;
+	min-height: 20vh;
 	width: 100vw;
 	background-color: $gray;
 	display: flex;
@@ -243,6 +240,7 @@ body {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		margin: 2rem;
 	}
 
 	&__icon {
@@ -273,6 +271,16 @@ body {
 		font-size: 1rem;
 		color: $white;
 		text-decoration: none;
+	}
+
+	&__a {
+		text-decoration: none;
+		transition: opacity 0.4s, transform 0.4s;
+		opacity: 0.7;
+		&:hover {
+			opacity: 1;
+			transform: scale(1.1);
+		}
 	}
 }
 

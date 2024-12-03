@@ -15,7 +15,7 @@ const trashSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	imageUrl: {
+	localization: {
 		type: String,
 		required: true,
 	},
