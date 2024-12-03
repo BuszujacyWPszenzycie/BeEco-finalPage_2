@@ -35,7 +35,6 @@ app.use(
 			directives: {
 				defaultSrc: ["'self'"],
 				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
-				styleSrc: ["'self'", "'unsafe-inline'"],
 				imgSrc: ["'self'", 'https://lezebre.lu'],
 			},
 		},
