@@ -25,22 +25,33 @@ app.use((req, res, next) => {
 	next()
 })
 
-// app.use(helmet(
+// app.use(
+// 	helmet({
+// 		contentSecurityPolicy: {
+// 			directives: {
+// 				defaultSrc: ["'self'"],
+// 				styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'unpkg.com'],
+// 				fontSrc: ["'self'", 'fonts.gstatic.com', 'unpkg.com'],
+// 				scriptSrc: ["'self'", 'unpkg.com', "'unsafe-inline'"],
+// 				connectSrc: ["'self'", 'unpkg.com'],
+// 				imgSrc: ["'self'", 'data:', 'unpkg.com', 'lezebre.lu'],
+// 			},
+// 		},
+// 	})
+// )
 
 app.use(
 	helmet({
 		contentSecurityPolicy: {
 			directives: {
 				defaultSrc: ["'self'"],
-				styleSrc: ["'self'", "'unsafe-inline'", 'fonts.googleapis.com', 'unpkg.com'],
-				fontSrc: ["'self'", 'fonts.gstatic.com', 'unpkg.com'],
-				scriptSrc: ["'self'", 'unpkg.com', "'unsafe-inline'"],
-				connectSrc: ["'self'", 'unpkg.com'],
-				imgSrc: ["'self'", 'data:', 'unpkg.com', 'lezebre.lu'],
+				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
+				imgSrc: ["'self'", 'https://lezebre.lu'],
 			},
 		},
 	})
 )
+
 app.use(compression())
 app.use(morgan('combined', { stream: accessLogStream }))
 
