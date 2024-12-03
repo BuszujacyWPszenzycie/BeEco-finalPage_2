@@ -29,17 +29,17 @@ app.use((req, res, next) => {
 
 // ))
 
-app.use(
-	helmet({
-		contentSecurityPolicy: {
-			directives: {
-				defaultSrc: ["'self'"],
-				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
-				imgSrc: ["'self'", 'https://lezebre.lu'],
-			},
-		},
-	})
-)
+// app.use(
+// 	helmet({
+// 		contentSecurityPolicy: {
+// 			directives: {
+// 				defaultSrc: ["'self'"],
+// 				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
+// 				imgSrc: ["'self'", 'https://lezebre.lu'],
+// 			},
+// 		},
+// 	})
+// )
 
 app.use(compression())
 app.use(morgan('combined', { stream: accessLogStream }))
