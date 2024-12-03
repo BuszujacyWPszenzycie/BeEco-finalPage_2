@@ -332,15 +332,11 @@ body {
 	display: none;
 }
 
-body {
-	.cookie__box {
-		&:not(.hide) {
-			display: flex !important;
-		}
+.cookie__box {
+	display: flex !important;
 
-		&.hide {
-			display: none !important;
-		}
+	&.hide {
+		display: none !important;
 	}
 }
 

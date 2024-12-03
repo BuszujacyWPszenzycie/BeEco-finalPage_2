@@ -274,10 +274,10 @@ body {
   display: none;
 }
 
-body .cookie__box:not(.hide) {
+.cookie__box {
   display: flex !important;
 }
-body .cookie__box.hide {
+.cookie__box.hide {
   display: none !important;
 }
 
