@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  display: block;
   font-size: 1rem;
   font-family: "Jura", serif;
   background-image: linear-gradient(220.55deg, #ffd439 0%, #ff7a00 100%);
@@ -225,6 +226,7 @@ body {
 }
 
 .cookie__box {
+  display: block;
   position: fixed;
   bottom: 0;
   height: 20vh;
