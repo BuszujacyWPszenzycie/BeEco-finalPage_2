@@ -1,7 +1,0 @@
-{
-	"env": {
-		"MONGO_USER": "buszujacywpszenzycie",
-		"MONGO_PASSWORD": "test",
-		"MONGO_DATABASE": "beeco"
-	}
-}
