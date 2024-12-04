@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 const helmet = require('helmet')
 const compression = require('compression')
 const morgan = require('morgan')
+const favicon = require('serve-favicon')
 
 const app = express()
 
@@ -43,8 +44,15 @@ app.use(morgan('combined', { stream: accessLogStream }))
 // Do momentu kiedy ten routes jest pusty musi być zakomentowany
 app.use(interfaceRoutes)
 
+app.get('/favicon_leaf.ico', (req, res) => {
+	res.sendFile(path.join(__dirname, 'images', 'favicon_leaf.ico'))
+})
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, 'images')))
+// app.use(express.favicon(path.join(__dirname, 'public')))
+// app.use(express.favicon(__dirname, '/public/images/favicon_leaf.png'))
 
 const PORT = process.env.PORT || 3000
 
