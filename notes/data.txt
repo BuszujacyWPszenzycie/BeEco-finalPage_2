@@ -2,13 +2,13 @@ https://ramp.com/
 
 FontSizes:
 
-Phone
-h1	2.027rem	
-h2	1.802rem	
-h3	1.602rem	
-h4	1.424rem	
-h5	1.266rem	
-h6	1.125rem	
+h1	3.815rem	
+h2	3.052rem	
+
+h3	2.441rem	
+h4	1.953rem	
+h5	1.563rem	
+h6	1.25rem	
 p	1rem	
-small	0.889rem	
-0.79rem	
+small	0.8rem	
+0.64rem	

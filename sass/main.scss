@@ -1,5 +1,6 @@
 @use 'colors' as *;
 @use 'mixin' as *;
+@use 'fontsizes' as *;
 
 *,
 *::before,
@@ -17,7 +18,7 @@ html {
 body {
 	font-size: 1rem;
 	font-family: 'Jura', serif;
-	background-color: $main-green;
+	// background-color: $main-green;
 }
 
 // HEADER
@@ -28,7 +29,6 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 1.5rem;
-	background-color: red;
 
 	&__iconWrapper {
 		display: flex;
@@ -36,12 +36,12 @@ body {
 	}
 
 	&__title {
-		color: $white;
-		font-size: 2.027rem;
+		color: $main-green;
+		font-size: $basic-h2;
 	}
 
 	&__icon {
-		color: $white;
+		color: $main-green;
 		font-size: 2.027rem;
 	}
 
@@ -62,10 +62,29 @@ body {
 
 .opening {
 	&__section {
+		height: 85vh;
+		width: 100vw;
 	}
 
 	&__title {
-		font-size: 2.027rem;
+		font-size: $basic-h1;
+		color: $main-green;
+		margin: 1rem;
+	}
+
+	&__subtitle {
+		font-size: $basic-h2;
+		color: $main-green;
+		margin: 1rem;
+	}
+
+	&__image {
+		width: 100vw;
+		height: 50vh;
+		background-image: url('/images/header_big_2.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 

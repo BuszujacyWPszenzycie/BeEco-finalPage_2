@@ -14,7 +14,6 @@ html {
 body {
   font-size: 1rem;
   font-family: "Jura", serif;
-  background-color: #1a3631;
 }
 
 .header {
@@ -23,18 +22,17 @@ body {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
-  background-color: red;
 }
 .header__iconWrapper {
   display: flex;
   align-items: center;
 }
 .header__title {
-  color: #ffffff;
-  font-size: 2.027rem;
+  color: rgb(26, 54, 49);
+  font-size: 3.052rem;
 }
 .header__icon {
-  color: #ffffff;
+  color: rgb(26, 54, 49);
   font-size: 2.027rem;
 }
 .header__item {
@@ -45,6 +43,25 @@ body {
   display: none;
 }
 
+.opening__section {
+  height: 85vh;
+  width: 100vw;
+}
 .opening__title {
-  font-size: 2.027rem;
+  font-size: 3.815rem;
+  color: rgb(26, 54, 49);
+  margin: 1rem;
+}
+.opening__subtitle {
+  font-size: 3.052rem;
+  color: rgb(26, 54, 49);
+  margin: 1rem;
+}
+.opening__image {
+  width: 100vw;
+  height: 50vh;
+  background-image: url("/images/header_big_2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */
