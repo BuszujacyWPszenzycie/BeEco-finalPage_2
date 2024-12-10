@@ -51,8 +51,6 @@ app.get('/favicon_leaf.ico', (req, res) => {
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'images')))
-// app.use(express.favicon(path.join(__dirname, 'public')))
-// app.use(express.favicon(__dirname, '/public/images/favicon_leaf.png'))
 
 const PORT = process.env.PORT || 3000
 

@@ -1,22 +1,14 @@
 @use 'colors' as *;
 
-@mixin basicSearchInputAndButton {
-	margin: 2rem;
-	border: none;
-	background-color: $white;
-	color: $gray;
-	width: 60vw;
-	height: 40px;
-	font-family: inherit;
-	transition: background-color 0.4s, color 0.4s;
-}
+// @mixin basicSearchInputAndButton {
+// 	margin: 2rem;
+// 	border: none;
+// 	background-color: $white;
+// 	color: $gray;
+// 	width: 60vw;
+// 	height: 40px;
+// 	font-family: inherit;
+// 	transition: background-color 0.4s, color 0.4s;
+// }
 
-@mixin smallSearchInputAndButton {
-	font-size: 1.5rem;
-	height: 50px;
-}
 
-@mixin mediumSearchInputAndButton {
-	font-size: 2rem;
-	height: 60px;
-}

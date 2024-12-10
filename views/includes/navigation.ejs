@@ -1,18 +1,18 @@
-<nav class="nav nav__mobile">
-  <ul class="nav__mobile--list">
-    <li class="nav__mobile--item">
+<header class="header">
 
+  <div class="header__iconWrapper header__item">
+    <h1 class="header__title h1">BeEco</h1>
+    <i class="ph ph-leaf header__icon"></i>
+  </div>
 
-      <a href="/" class="nav__mobile--link">
-        <% if (path=="/" ) { %>
-          <i class="ph ph-recycle nav__mobile--icon"></i>
-          <% } else { %>
-            <i class="ph ph-arrow-left nav__mobile--icon"></i>
-            <% } %>
-      </a>
+  <button class="hamburger hamburger--spin header__hamburger header__item" type="button">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
 
-    </li>
+  <nav class="nav__mobile header__item">
 
-  </ul>
-</nav>
+  </nav>
+
 </header>
