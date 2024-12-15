@@ -2,12 +2,14 @@ const hamburgerBtn = document.querySelector('.hamburger')
 const navMobileIcon = document.querySelector('.header__icon')
 const navMobileTitle = document.querySelector('.header__title')
 const navMobile = document.querySelector('.nav__mobile')
+const body = document.querySelector('body')
 
 const showMobileNav = () => {
 	hamburgerBtn.classList.toggle('is-active')
 	navMobileIcon.classList.toggle('show-nav-header')
 	navMobileTitle.classList.toggle('show-nav-header')
-	navMobile.classList.toggle('show-mobile-nav')
+	navMobile.classList.toggle('show-nav-mobile')
+	body.classList.toggle('show-nav-body')
 }
 
 hamburgerBtn.addEventListener('click', showMobileNav)

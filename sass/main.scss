@@ -44,7 +44,7 @@ body {
 	&__icon {
 		color: $main-green;
 		font-size: 2.027rem;
-		z-index: 5;
+		z-index: 4;
 	}
 
 	&__item {
@@ -52,7 +52,7 @@ body {
 	}
 
 	&__hamburger {
-		z-index: 5;
+		z-index: 7;
 	}
 }
 
@@ -106,12 +106,26 @@ body {
 // SHOW MOBILE NAV
 
 .show-nav-header {
-	z-index: 5;
+	z-index: 3;
 	color: $white;
 }
 
-.show-mobile-nav {
+.show-nav-mobile {
 	transform: translateY(0);
+	z-index: 2;
+}
+
+.show-nav-body {
+	&::before {
+		content: '';
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: rgba(0, 0, 0, 0.3); /* Kolor tła i przezroczystość */
+		z-index: 1; /* Upewnij się, że jest niższy niż z-index nawigacji */
+	}
 }
 
 // OPENING
