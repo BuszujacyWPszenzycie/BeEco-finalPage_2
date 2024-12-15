@@ -3,7 +3,22 @@ const navMobileIcon = document.querySelector('.header__icon')
 const navMobileTitle = document.querySelector('.header__title')
 const navMobile = document.querySelector('.nav__mobile')
 const body = document.querySelector('body')
+const header = document.querySelector('.header')
+const scrollThreshold = 1 // Adjust this value as needed
 
+window.addEventListener('scroll', () => {
+	if (window.scrollY > scrollThreshold) {
+		header.classList.add('header__fixed')
+		navMobileTitle.classList.add('header__title--fixed')
+		navMobileIcon.classList.add('header__icon--fixed')
+	} else {
+		header.classList.remove('header__fixed')
+		navMobileTitle.classList.remove('header__title--fixed')
+		navMobileIcon.classList.remove('header__icon--fixed')
+	}
+})
+
+// Normal showing nav
 const showMobileNav = () => {
 	hamburgerBtn.classList.toggle('is-active')
 	navMobileIcon.classList.toggle('show-nav-header')
@@ -12,7 +27,35 @@ const showMobileNav = () => {
 	body.classList.toggle('show-nav-body')
 }
 
+// Function for closing the nave once the user click the link --> for the below function
+const closeMobileNav = () => {
+	hamburgerBtn.classList.remove('is-active')
+	navMobileIcon.classList.remove('show-nav-header')
+	navMobileTitle.classList.remove('show-nav-header')
+	navMobile.classList.remove('show-nav-mobile')
+	body.classList.remove('show-nav-body')
+}
+
+// Closing nav once the user click any of the links
+navMobile.querySelectorAll('a').forEach(link => {
+	link.addEventListener('click', closeMobileNav)
+})
+
+// Event listener for clicks outside the nav
+document.addEventListener('click', event => {
+	if (!navMobile.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+		closeMobileNav()
+	}
+})
+
+// Prevent clicks inside the nav from closing it
+navMobile.addEventListener('click', event => {
+	event.stopPropagation()
+})
+
 hamburgerBtn.addEventListener('click', showMobileNav)
+
+// COOKIE BOX
 
 // const cookieBox = document.querySelector('.cookie__box')
 // const cookieBtn = document.querySelector('.cookie__btn')

@@ -54,15 +54,19 @@ app.use(express.static(path.join(__dirname, 'images')))
 
 const PORT = process.env.PORT || 3000
 
-mongoose
-	.connect(MONGODB_URI)
-	.then(() => {
-		// Start the server once connected to the database
-		const PORT = process.env.PORT || 3000
-		app.listen(PORT, () => {
-			// console.log(`Server is running on http://localhost:${PORT}`)
-		})
-	})
-	.catch(err => {
-		console.error('MongoDB connection error:', err)
-	})
+// mongoose
+// 	.connect(MONGODB_URI)
+// 	.then(() => {
+// 		// Start the server once connected to the database
+// 		const PORT = process.env.PORT || 3000
+// 		app.listen(PORT, () => {
+// 			// console.log(`Server is running on http://localhost:${PORT}`)
+// 		})
+// 	})
+// 	.catch(err => {
+// 		console.error('MongoDB connection error:', err)
+// 	})
+
+app.listen(PORT, () => {
+	// console.log(`Server is running on http://localhost:${PORT}`)
+})
