@@ -10,7 +10,8 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 200px;
+  scroll-padding-top: 100px;
+  overflow-x: hidden;
 }
 
 body {
@@ -20,7 +21,8 @@ body {
 
 .header {
   position: relative;
-  height: 15vh;
+  height: 100px;
+  flex-shrink: 0; /* Prevents the header from shrinking */
   width: 100vw;
   display: flex;
   justify-content: space-between;
@@ -39,6 +41,7 @@ body {
 .header__iconWrapper {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .header__title {
   color: rgb(26, 54, 49);
@@ -119,9 +122,14 @@ body {
   z-index: 1; /* Upewnij się, że jest niższy niż z-index nawigacji */
 }
 
+.opening__wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+}
 .opening__section {
-  height: 85vh;
-  width: 100vw;
+  flex-grow: 1; /* Fills the remaining space */
+  overflow: auto; /* Allows scrolling if content overflows */
 }
 .opening__title {
   font-size: 3.815rem;

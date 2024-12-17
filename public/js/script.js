@@ -4,7 +4,8 @@ const navMobileTitle = document.querySelector('.header__title')
 const navMobile = document.querySelector('.nav__mobile')
 const body = document.querySelector('body')
 const header = document.querySelector('.header')
-const scrollThreshold = 1 // Adjust this value as needed
+
+const scrollThreshold = 0 // Adjust this value as needed
 
 window.addEventListener('scroll', () => {
 	if (window.scrollY > scrollThreshold) {

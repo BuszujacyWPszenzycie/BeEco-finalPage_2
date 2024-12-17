@@ -13,12 +13,16 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	scroll-padding-top: 200px;
+	// scroll-padding-top: 15vh;
+	// scroll-padding-bottom: 15vh;
+	scroll-padding-top: 100px;
+	overflow-x: hidden;
 }
 
 body {
 	font-size: 1rem;
 	font-family: 'Jura', serif;
+	// scroll-padding-top: 15vh;
 	// background-color: $main-green;
 }
 
@@ -26,7 +30,9 @@ body {
 
 .header {
 	position: relative;
-	height: 15vh;
+	height: 100px;
+	flex-shrink: 0; /* Prevents the header from shrinking */
+	// background-color: red;
 	width: 100vw;
 	display: flex;
 	justify-content: space-between;
@@ -46,6 +52,7 @@ body {
 	&__iconWrapper {
 		display: flex;
 		align-items: center;
+		text-decoration: none;
 	}
 
 	&__title {
@@ -151,9 +158,15 @@ body {
 // OPENING
 
 .opening {
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		height: 100vh; /* Full viewport height */
+	}
+
 	&__section {
-		height: 85vh;
-		width: 100vw;
+		flex-grow: 1; /* Fills the remaining space */
+		overflow: auto; /* Allows scrolling if content overflows */
 	}
 
 	&__title {
