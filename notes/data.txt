@@ -11,3 +11,55 @@ h6	1.25rem
 p	1rem	
 small	0.8rem	
 0.64rem	
+
+TEXT FOR ABOUT SECTION
+
+
+      <h2 class="about__title">Nasza misja</h2>
+      <p class="about__paragraph">
+        Naszym celem jest ułatwienie Ci prawidłowej segregacji odpadów, aby wspólnie dbać o środowisko. Oto, co
+        oferujemy:
+      </p>
+
+      <h3 class="about__subtitle">Intuicyjna wyszukiwarka odpadów</h3>
+
+      <p class="about__paragraph">
+        Dzięki naszej zaawansowanej wyszukiwarce szybko znajdziesz informacje o tym, do którego pojemnika należy
+        wrzucić dany odpad. Wystarczy wpisać nazwę przedmiotu, a my pokażemy Ci, gdzie powinien trafić.
+      </p>
+
+      <h3 class="about__subtitle">Praktyczne wskazówki</h3>
+
+      <p class="about__paragraph">
+        Dowiesz się, jak prawidłowo przygotować odpady przed wyrzuceniem. Nasze porady pomogą Ci w odpowiednim
+        oczyszczeniu i posortowaniu śmieci, co znacznie ułatwi proces recyklingu.
+      </p>
+
+      <h3 class="about__subtitle">Współtworzenie bazy wiedzy.</h3>
+
+      <p class="about__paragraph">
+        Dowiesz się, jak prawidłowo przygotować odpady przed wyrzuceniem. Nasze porady pomogą Ci w odpowiednim
+        oczyszczeniu i posortowaniu śmieci, co znacznie ułatwi proces recyklingu.
+      </p>
+
+      <h6 class="about__secondSubtitle">Razem możemy przyczynić się do lepszej ochrony naszej planety. Dołącz do nas w
+        misji świadomego i odpowiedzialnego gospodarowania odpadami!</h6>
+
+        	&__title {
+		font-size: $basic-h2;
+		margin-bottom: 1.5rem;
+	}
+
+	&__subtitle {
+		font-size: $basic-h3;
+		margin-bottom: 1.5rem;
+	}
+
+	&__secondSubtitle {
+		font-size: $basic-h6;
+		margin-bottom: 1.5rem;
+	}
+
+	&__paragraph {
+		margin-bottom: 3rem;
+	}
