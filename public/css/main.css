@@ -254,6 +254,7 @@ body {
   border: none;
   border-radius: 5px;
   margin: 2rem;
+  padding: 1rem;
 }
 .contact__textarea {
   height: 100px;
