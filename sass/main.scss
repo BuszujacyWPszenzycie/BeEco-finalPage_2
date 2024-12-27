@@ -226,6 +226,7 @@ body {
 			.about__icon {
 				transform: rotateY(180deg); // Obrót ikony o 180 stopni względem osi x
 				color: $main-green; // Zmiana koloru ikony na zielony
+				// transform: scale(1.4);
 			}
 
 			box-shadow: 11px 9px 43px 7px rgba(28, 27, 23, 0.3);
@@ -260,6 +261,7 @@ body {
 		align-items: center;
 		flex-direction: column;
 		border-top: 1px solid rgba(96, 115, 111, 0.5);
+		border-bottom: 1px solid rgba(96, 115, 111, 0.5);
 		// background-color: red;
 	}
 
@@ -267,11 +269,12 @@ body {
 		width: 90vw;
 		height: 40px;
 		background-color: $gray;
-		border: 1px solid rgba(96, 115, 111, 0.5);
+		border: 1px solid rgba(96, 115, 111, 0.2);
 		border-radius: 5px;
 		font-family: inherit;
 		text-align: center;
 		margin: 2rem;
+		font-size: $basic-h5;
 		&:focus {
 			outline: none;
 			border: 1px solid rgba(96, 115, 111);
@@ -279,24 +282,7 @@ body {
 	}
 
 	&__button {
-		width: 90vw;
-		height: 40px;
-		font-family: inherit;
-		font-weight: bold;
-		background-color: $main-yellow;
-		border-radius: 5px;
-		border: none;
-		margin: 2rem;
-		transition: opacity 0.4s, transform 0.4s;
-		cursor: pointer;
-
-		&:hover {
-			opacity: 0.85;
-		}
-
-		&:active {
-			transform: scale(1.05);
-		}
+		@include btn;
 	}
 }
 
@@ -304,12 +290,22 @@ body {
 
 .contact {
 	&__section {
-		height: 100vh;
+		height: 100%;
 		width: 100vw;
-		background-color: $main-green;
+		margin-top: 4rem;
+		margin-bottom: 4rem;
+		// background-color: $main-green;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
+
+	&__title {
+		text-align: left;
+		width: 100%;
+		padding: 2rem;
+		font-size: $basic-h4;
+		// background-color: red;
 	}
 
 	&__item {
@@ -321,10 +317,93 @@ body {
 		border-radius: 5px;
 		margin: 2rem;
 		padding: 1rem;
+		color: $main-green;
+		border: 1px solid rgba(96, 115, 111, 0.2);
+		font-size: $basic-h5;
+		&::placeholder {
+			color: rgb(26, 54, 49, 0.8);
+		}
+		&:focus {
+			outline: none;
+			border: 1px solid rgba(96, 115, 111);
+		}
 	}
 
 	&__textarea {
 		height: 100px;
+		border: 1px solid rgba(96, 115, 111, 0.2);
+		font-size: $basic-h5;
+		resize: vertical;
+		&:focus {
+			outline: none;
+			border: 1px solid rgba(96, 115, 111);
+		}
+	}
+
+	&__button {
+		@include btn;
+	}
+}
+
+// FOOTER
+
+.footer {
+	height: 30vh;
+	width: 100vw;
+	background-color: $input-green;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 3rem;
+
+	&__icon {
+		color: $white;
+		font-size: $basic-h2;
+		display: inline-block;
+		padding: 2rem;
+		cursor: pointer;
+		transition: transform 0.6s ease, color 0.6s ease;
+
+		&:hover {
+			color: $hover-yellow;
+			transform: rotateY(360deg) scale(1.1);
+		}
+	}
+
+	&__textWrapper {
+		display: flex; /* Keep it flexible */
+		flex-wrap: wrap; /* Allows wrapping to the next line */
+		align-items: center; /* Aligns items vertically in the center */
+		justify-content: center;
+		// gap: 0.5rem; /* Adds space between the elements */
+		padding: 1rem; /* Optional padding */
+		width: 100%; /* Ensure it spans the full width of the container */
+		box-sizing: border-box; /* Includes padding in width calculation */
+		text-align: center;
+		font-size: $basic-h6;
+		padding: 2rem;
+	}
+
+	&__textItem {
+		color: $white;
+		padding: 0.5rem;
+		white-space: nowrap; /* Prevents individual items from wrapping */
+		overflow-wrap: normal; /* Ensures proper word breaking */
+		text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
+	}
+
+	&__link {
+		color: $hover-yellow;
+		text-decoration: none;
+		white-space: nowrap; /* Prevents individual items from wrapping */
+		overflow-wrap: normal; /* Ensures proper word breaking */
+		text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
+	}
+	&__separate {
+		color: $white;
+		white-space: nowrap; /* Prevents individual items from wrapping */
+		overflow-wrap: normal; /* Ensures proper word breaking */
+		text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
 	}
 }
 
