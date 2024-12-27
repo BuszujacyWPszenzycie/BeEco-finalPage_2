@@ -9,6 +9,13 @@ const compression = require('compression')
 const morgan = require('morgan')
 const favicon = require('serve-favicon')
 
+// MAIL
+
+const nodemailer = require('nodemailer')
+const { body, validationResult } = require('express-validator')
+const rateLimit = require('express-rate-limit')
+require('dotenv').config()
+
 const app = express()
 
 const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0.hbc0z1i.mongodb.net/${process.env.MONGO_DATABASE}`
@@ -51,6 +58,36 @@ app.get('/favicon_leaf.ico', (req, res) => {
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'images')))
+
+// MAIL
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+
+const transporter = nodemailer.createTransport({
+	service: 'Gmail',
+	host: process.env.SMTP_HOST,
+	port: process.env.SMTP_PORT,
+	secure: true,
+	auth: {
+		user: process.env.SMTP_USER,
+		pass: process.env.SMTP_PASS,
+	},
+})
+
+const mailOptions = {
+	from: 'test@gmail.com',
+	to: 'contact.beeco@gmail.com',
+	subject: 'Hello from Nodemailer',
+	text: 'Is this working?.',
+}
+
+transporter.sendMail(mailOptions, (error, info) => {
+	if (error) {
+		console.error('Error sending email: ', error)
+	} else {
+		console.log('Email sent: ', info.response)
+	}
+})
 
 const PORT = process.env.PORT || 3000
 

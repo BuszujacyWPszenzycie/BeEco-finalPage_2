@@ -101,10 +101,14 @@
 
         <h4 class="contact__title">Masz sugestie? Napisz do nas!</h4>
 
-        <textarea name="" id="" class="contact__item contact__textarea" placeholder="Treść wiadomości"></textarea>
-        <input type="text" class="contact__item contact__input" placeholder="Temat">
-        <input type="mail" class="contact__item contact__input" placeholder="Mail">
-        <button class="contact__button button">Wyślij</button>
+        <form action="/contact" method="post">
+
+          <textarea name="" id="" class="contact__item contact__textarea" placeholder="Treść wiadomości"></textarea>
+          <input type="text" class="contact__item contact__input" placeholder="Temat">
+          <input type="mail" class="contact__item contact__input" placeholder="Mail">
+          <button class="contact__button button" type="submit">Wyślij</button>
+
+        </form>
 
       </section>
 
