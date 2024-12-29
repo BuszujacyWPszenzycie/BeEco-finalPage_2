@@ -8,21 +8,6 @@ exports.getIndex = (req, res, next) => {
 	})
 }
 
-// SENDING MAILS
-
-exports.sendMail = (req, res, next) => {
-	const subject = req.body.subject
-	const email = req.body.email
-	const message = req.body.message
-	console.log(subject)
-	console.log(email)
-	console.log(message)
-
-	req.body.then(result => {
-		res.redirect('/')
-	})
-}
-
 // SEARCH ITEMS
 
 exports.searchItems = (req, res, next) => {

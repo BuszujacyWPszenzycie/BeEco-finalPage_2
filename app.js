@@ -9,6 +9,8 @@ const compression = require('compression')
 const morgan = require('morgan')
 const favicon = require('serve-favicon')
 
+const errorController = require('./controllers/errorController')
+
 // MAIL
 
 const app = express()
@@ -43,13 +45,20 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'images')))
 
+app.use((req, res, next) => {
+	console.log(req.url)
+	next()
+})
+
 // Do momentu kiedy ten routes jest pusty musi być zakomentowany
 app.use(interfaceRoutes)
-app.use('/api', emailRoutes)
+app.use(emailRoutes)
 
 app.get('/favicon_leaf.ico', (req, res) => {
 	res.sendFile(path.join(__dirname, 'images', 'favicon_leaf.ico'))
 })
+
+app.use(errorController.get404)
 
 const PORT = process.env.PORT || 3000
 

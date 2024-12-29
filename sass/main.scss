@@ -262,7 +262,6 @@ body {
 		flex-direction: column;
 		border-top: 1px solid rgba(96, 115, 111, 0.5);
 		border-bottom: 1px solid rgba(96, 115, 111, 0.5);
-		// background-color: red;
 	}
 
 	&__input {
@@ -348,25 +347,26 @@ body {
 // FOOTER
 
 .footer {
-	height: 30vh;
+	height: 20vh;
 	width: 100vw;
 	background-color: $input-green;
 	display: flex;
 	flex-direction: column;
+	justify-content: space-around;
 	align-items: center;
-	padding: 3rem;
+	// padding: 3rem;
 
 	&__icon {
 		color: $white;
 		font-size: $basic-h2;
 		display: inline-block;
-		padding: 2rem;
 		cursor: pointer;
-		transition: transform 0.6s ease, color 0.6s ease;
+		transition: transform 0s ease, color 0.3s ease;
+		padding: 2rem;
 
 		&:hover {
 			color: $hover-yellow;
-			transform: rotateY(360deg) scale(1.1);
+			// transform: rotateY(360deg);
 		}
 	}
 
@@ -376,17 +376,15 @@ body {
 		align-items: center; /* Aligns items vertically in the center */
 		justify-content: center;
 		// gap: 0.5rem; /* Adds space between the elements */
-		padding: 1rem; /* Optional padding */
 		width: 100%; /* Ensure it spans the full width of the container */
 		box-sizing: border-box; /* Includes padding in width calculation */
 		text-align: center;
 		font-size: $basic-h6;
-		padding: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	&__textItem {
 		color: $white;
-		padding: 0.5rem;
 		white-space: nowrap; /* Prevents individual items from wrapping */
 		overflow-wrap: normal; /* Ensures proper word breaking */
 		text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
@@ -404,6 +402,95 @@ body {
 		white-space: nowrap; /* Prevents individual items from wrapping */
 		overflow-wrap: normal; /* Ensures proper word breaking */
 		text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
+	}
+}
+
+// THANKS
+
+.thanks {
+	&__section {
+		height: 80vh;
+		width: 100vw;
+		padding-top: 2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__textWrapper {
+		width: 90vw;
+		height: 40vh;
+		background-color: $gray;
+		border-radius: 8px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&--top {
+			padding: 2rem;
+		}
+
+		&--bottom {
+			text-align: end;
+			padding: 2rem;
+		}
+	}
+
+	&__title {
+		font-size: $basic-h3;
+		padding-bottom: 2rem;
+	}
+
+	&__subtitle {
+		font-size: $basic-h6;
+	}
+
+	&__signature {
+		font-size: $basic-h5;
+	}
+
+	&__link {
+		text-decoration: none;
+	}
+
+	&__icon {
+		font-size: 6rem;
+		color: $main-green;
+	}
+
+	&__buttonWrapper {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		cursor: pointer;
+		transition: transform 0.6s ease, color 0.6s ease;
+	}
+
+	&__button {
+		@include btn;
+	}
+}
+
+// ERROR
+
+.error {
+	&__section {
+		height: 80vh;
+		width: 100vw;
+	}
+
+	&__textWrapper {
+	}
+
+	&__imageWrapper {
+	}
+
+	&__image {
+		width: 100vw;
+		height: 50vh;
+		background-image: url('/images/error_big.jpg');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 }
 

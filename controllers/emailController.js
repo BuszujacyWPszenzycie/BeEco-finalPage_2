@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer')
+const errorController = require('./errorController')
 
 // const transporter = nodemailer.createTransport({
 // 	service: 'gmail',
@@ -32,11 +33,18 @@ exports.sendEmail = (req, res) => {
 	transporter.sendMail(mailOptions, (error, info) => {
 		if (error) {
 			console.log(error)
-			res.status(500).send('Wystąpił błąd podczas wysyłania e-maila')
+			errorController.get404(req, res, next)
 		} else {
 			console.log('Email wysłany: ' + info.response)
-			res.status(200).send('E-mail został wysłany pomyślnie')
+			res.redirect('/send-email')
 		}
+	})
+}
+
+exports.renderSendEmailPage = (req, res) => {
+	res.render('send-email', {
+		path: '/send-email',
+		pageTitle: 'Dziękuję za kontakt!',
 	})
 }
 

@@ -318,41 +318,38 @@ body {
 }
 
 .footer {
-  height: 30vh;
+  height: 20vh;
   width: 100vw;
   background-color: #314a46;
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  padding: 3rem;
 }
 .footer__icon {
   color: #ffffff;
   font-size: 3.052rem;
   display: inline-block;
-  padding: 2rem;
   cursor: pointer;
-  transition: transform 0.6s ease, color 0.6s ease;
+  transition: transform 0s ease, color 0.3s ease;
+  padding: 2rem;
 }
 .footer__icon:hover {
   color: #f5ff78;
-  transform: rotateY(360deg) scale(1.1);
 }
 .footer__textWrapper {
   display: flex; /* Keep it flexible */
   flex-wrap: wrap; /* Allows wrapping to the next line */
   align-items: center; /* Aligns items vertically in the center */
   justify-content: center;
-  padding: 1rem; /* Optional padding */
   width: 100%; /* Ensure it spans the full width of the container */
   box-sizing: border-box; /* Includes padding in width calculation */
   text-align: center;
   font-size: 1.25rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
 }
 .footer__textItem {
   color: #ffffff;
-  padding: 0.5rem;
   white-space: nowrap; /* Prevents individual items from wrapping */
   overflow-wrap: normal; /* Ensures proper word breaking */
   text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
@@ -369,4 +366,89 @@ body {
   white-space: nowrap; /* Prevents individual items from wrapping */
   overflow-wrap: normal; /* Ensures proper word breaking */
   text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
+}
+
+.thanks__section {
+  height: 80vh;
+  width: 100vw;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.thanks__textWrapper {
+  width: 90vw;
+  height: 40vh;
+  background-color: #efefef;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.thanks__textWrapper--top {
+  padding: 2rem;
+}
+.thanks__textWrapper--bottom {
+  text-align: end;
+  padding: 2rem;
+}
+.thanks__title {
+  font-size: 2.441rem;
+  padding-bottom: 2rem;
+}
+.thanks__subtitle {
+  font-size: 1.25rem;
+}
+.thanks__signature {
+  font-size: 1.563rem;
+}
+.thanks__link {
+  text-decoration: none;
+}
+.thanks__icon {
+  font-size: 6rem;
+  color: rgb(26, 54, 49);
+}
+.thanks__buttonWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.6s ease, color 0.6s ease;
+}
+.thanks__button {
+  width: 90vw;
+  height: 40px;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: #f5ff78;
+  border-radius: 5px;
+  border: none;
+  margin: 2rem;
+  transition: opacity 0.4s, transform 0.4s;
+  cursor: pointer;
+  font-size: 1.563rem;
+}
+.thanks__button:hover {
+  opacity: 0.85;
+}
+.thanks__button:active {
+  transform: scale(1.05);
+}
+.thanks__button:focus {
+  outline: none;
+  background-color: #e4f225;
+}
+
+.error__section {
+  height: 80vh;
+  width: 100vw;
+}
+.error__image {
+  width: 100vw;
+  height: 50vh;
+  background-image: url("/images/error_big.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */
