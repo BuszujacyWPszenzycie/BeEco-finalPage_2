@@ -474,24 +474,78 @@ body {
 
 .error {
 	&__section {
+		position: relative;
 		height: 80vh;
 		width: 100vw;
+		background-image: url('/images/error_small.jpg');
 	}
 
-	&__textWrapper {
+	&__title {
+		position: absolute;
+		padding: 2rem;
+		top: 2rem;
+		font-size: $basic-h1;
 	}
 
-	&__imageWrapper {
+	&__subtitle {
+		position: absolute;
+		padding: 2rem;
+		top: 9rem;
+		width: 70vw;
+		font-size: $basic-h3;
 	}
 
-	&__image {
-		width: 100vw;
-		height: 50vh;
-		background-image: url('/images/error_big.jpg');
-		background-position: center;
-		background-repeat: no-repeat;
-		background-size: cover;
+	&__text {
+		position: absolute;
+		padding: 2rem;
+		top: 18rem;
+		width: 60vw;
+		font-size: $basic-h6;
 	}
+
+	&__button {
+		position: absolute;
+		@include btn;
+
+		width: 150px;
+		bottom: 10px;
+	}
+
+	// &__section {
+	// 	height: 80vh;
+	// 	width: 100vw;
+	// 	background-image: url('/images/error_big.jpg');
+	// 	position: relative;
+	// 	background-size: cover;
+	// 	background-position: center;
+	// 	background-repeat: no-repeat;
+	// }
+
+	// &__text {
+	// 	position: absolute;
+	// 	top: 50%;
+	// 	left: 50%;
+	// 	transform: translate(-50%, -50%);
+	// 	background: rgba(255, 255, 255, 0.01); /* półprzezroczyste białe tło */
+	// 	color: #000;
+	// 	text-align: center;
+	// 	border-radius: 10px; /* zaokrąglone rogi */
+	// }
+
+	// &__textWrapper {
+	// }
+
+	// &__imageWrapper {
+	// }
+
+	// &__image {
+	// 	width: 100vw;
+	// 	height: 50vh;
+
+	// 	background-position: center;
+	// 	background-repeat: no-repeat;
+	// 	background-size: cover;
+	// }
 }
 
 // MEDIA

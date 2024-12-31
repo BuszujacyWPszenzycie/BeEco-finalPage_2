@@ -441,14 +441,54 @@ body {
 }
 
 .error__section {
+  position: relative;
   height: 80vh;
   width: 100vw;
+  background-image: url("/images/error_small.jpg");
 }
-.error__image {
-  width: 100vw;
-  height: 50vh;
-  background-image: url("/images/error_big.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.error__title {
+  position: absolute;
+  padding: 2rem;
+  top: 2rem;
+  font-size: 3.815rem;
+}
+.error__subtitle {
+  position: absolute;
+  padding: 2rem;
+  top: 9rem;
+  width: 70vw;
+  font-size: 2.441rem;
+}
+.error__text {
+  position: absolute;
+  padding: 2rem;
+  top: 18rem;
+  width: 60vw;
+  font-size: 1.25rem;
+}
+.error__button {
+  position: absolute;
+  width: 90vw;
+  height: 40px;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: #f5ff78;
+  border-radius: 5px;
+  border: none;
+  margin: 2rem;
+  transition: opacity 0.4s, transform 0.4s;
+  cursor: pointer;
+  font-size: 1.563rem;
+  width: 150px;
+  bottom: 10px;
+}
+.error__button:hover {
+  opacity: 0.85;
+}
+.error__button:active {
+  transform: scale(1.05);
+}
+.error__button:focus {
+  outline: none;
+  background-color: #e4f225;
 }/*# sourceMappingURL=main.css.map */

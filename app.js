@@ -7,7 +7,6 @@ const mongoose = require('mongoose')
 const helmet = require('helmet')
 const compression = require('compression')
 const morgan = require('morgan')
-const favicon = require('serve-favicon')
 
 const errorController = require('./controllers/errorController')
 
@@ -44,19 +43,13 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static(path.join(__dirname, 'images')))
-
-app.use((req, res, next) => {
-	console.log(req.url)
-	next()
+app.get('/favicon_leaf.ico', (req, res) => {
+	res.sendFile(path.join(__dirname, 'images', 'favicon_leaf.ico'))
 })
 
 // Do momentu kiedy ten routes jest pusty musi być zakomentowany
 app.use(interfaceRoutes)
 app.use(emailRoutes)
-
-app.get('/favicon_leaf.ico', (req, res) => {
-	res.sendFile(path.join(__dirname, 'images', 'favicon_leaf.ico'))
-})
 
 app.use(errorController.get404)
 
@@ -80,29 +73,3 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
 	// console.log(`Server is running on http://localhost:${PORT}`)
 })
-
-// const transporter = nodemailer.createTransport({
-// 	service: 'Gmail',
-// 	host: process.env.SMTP_HOST,
-// 	port: process.env.SMTP_PORT,
-// 	secure: true,
-// 	auth: {
-// 		user: process.env.SMTP_USER,
-// 		pass: process.env.SMTP_PASS,
-// 	},
-// })
-
-// const mailOptions = {
-// 	from: 'test@gmail.com',
-// 	to: 'contact.beeco@gmail.com',
-// 	subject: 'Hello from Nodemailer',
-// 	text: 'Is this working?.',
-// }
-
-// transporter.sendMail(mailOptions, (error, info) => {
-// 	if (error) {
-// 		console.error('Error sending email: ', error)
-// 	} else {
-// 		console.log('Email sent: ', info.response)
-// 	}
-// })
