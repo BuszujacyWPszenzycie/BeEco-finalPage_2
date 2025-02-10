@@ -52,7 +52,7 @@ body {
 }
 .header__icon {
   color: rgb(26, 54, 49);
-  font-size: 2.027rem;
+  font-size: 3.052rem;
   z-index: 4;
 }
 .header__icon--fixed {
@@ -491,4 +491,49 @@ body {
 .error__button:focus {
   outline: none;
   background-color: #e4f225;
+}
+
+@media (min-width: 576px) {
+  .header__title {
+    font-size: 4.2rem;
+  }
+  .header__icon {
+    font-size: 4.2rem;
+  }
+  .opening__title {
+    font-size: 4.2rem;
+  }
+  .opening__subtitle {
+    font-size: 3.35rem;
+  }
+  .opening__image {
+    background-attachment: fixed;
+  }
+  .about__item--top {
+    font-size: 2.7rem;
+  }
+  .about__item--bottom {
+    font-size: 2.15rem;
+  }
+  .footer__textWrapper {
+    font-size: 1.1rem;
+  }
+  .thanks__title {
+    font-size: 2.7rem;
+  }
+  .thanks__subtitle {
+    font-size: 1.1rem;
+  }
+  .thanks__signature {
+    font-size: 1.35rem;
+  }
+  .error__title {
+    font-size: 4.2rem;
+  }
+  .error__subtitle {
+    font-size: 2.7rem;
+  }
+  .error__text {
+    font-size: 1.1rem;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -2,12 +2,24 @@ https://ramp.com/
 
 FontSizes:
 
-h1	3.815rem	
-h2	3.052rem	
-h3	2.441rem	
-h4	1.953rem	
-h5	1.563rem	
-h6	1.25rem	
-p	1rem	
-small	0.8rem	
-0.64rem	
+Below: 576 px
+
+h1 { font-size: 3.815rem; }
+h2 { font-size: 3.052rem; }
+h3 { font-size: 2.441rem; }
+h4 { font-size: 1.953rem; }
+h5 { font-size: 1.563rem; }
+h6 { font-size: 1.25rem; }
+p  { font-size: 1rem; }
+
+Medium:
+
+@media (min-width: 576px) {
+  h1 { font-size: 4.2rem; }
+  h2 { font-size: 3.35rem; }
+  h3 { font-size: 2.7rem; }
+  h4 { font-size: 2.15rem; }
+  h5 { font-size: 1.7rem; }
+  h6 { font-size: 1.35rem; }
+  p  { font-size: 1.1rem; }
+}

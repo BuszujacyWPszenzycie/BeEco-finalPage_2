@@ -1,5 +1,73 @@
 @use 'colors' as *;
 @use 'mixin' as *;
+@use 'fontsizes' as *;
 
 @media (min-width: 576px) {
+	.header {
+		&__title {
+			font-size: $small-h1;
+		}
+
+		&__icon {
+			font-size: $small-h1;
+		}
+	}
+
+	.opening {
+		&__title {
+			font-size: $small-h1;
+		}
+
+		&__subtitle {
+			font-size: $small-h2;
+		}
+
+		&__image {
+			background-attachment: fixed;
+		}
+	}
+
+	.about {
+		&__item--top {
+			font-size: $small-h3;
+		}
+
+		&__item--bottom {
+			font-size: $small-h4;
+		}
+	}
+
+	.footer {
+		&__textWrapper {
+			font-size: $small-h6;
+		}
+	}
+
+	.thanks {
+		&__title {
+			font-size: $small-h3;
+		}
+
+		&__subtitle {
+			font-size: $small-h6;
+		}
+
+		&__signature {
+			font-size: $small-h5;
+		}
+	}
+
+	.error {
+		&__title {
+			font-size: $small-h1;
+		}
+
+		&__subtitle {
+			font-size: $small-h3;
+		}
+
+		&__text {
+			font-size: $small-h6;
+		}
+	}
 }

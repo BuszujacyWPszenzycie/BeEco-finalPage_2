@@ -66,16 +66,12 @@ body {
 
 	&__icon {
 		color: $main-green;
-		font-size: 2.027rem;
+		font-size: $basic-h2;
 		z-index: 4;
 
 		&--fixed {
 			color: $white;
 		}
-	}
-
-	&__item {
-		// padding: 0.5rem;
 	}
 
 	&__hamburger {
@@ -510,47 +506,11 @@ body {
 		width: 150px;
 		bottom: 10px;
 	}
-
-	// &__section {
-	// 	height: 80vh;
-	// 	width: 100vw;
-	// 	background-image: url('/images/error_big.jpg');
-	// 	position: relative;
-	// 	background-size: cover;
-	// 	background-position: center;
-	// 	background-repeat: no-repeat;
-	// }
-
-	// &__text {
-	// 	position: absolute;
-	// 	top: 50%;
-	// 	left: 50%;
-	// 	transform: translate(-50%, -50%);
-	// 	background: rgba(255, 255, 255, 0.01); /* półprzezroczyste białe tło */
-	// 	color: #000;
-	// 	text-align: center;
-	// 	border-radius: 10px; /* zaokrąglone rogi */
-	// }
-
-	// &__textWrapper {
-	// }
-
-	// &__imageWrapper {
-	// }
-
-	// &__image {
-	// 	width: 100vw;
-	// 	height: 50vh;
-
-	// 	background-position: center;
-	// 	background-repeat: no-repeat;
-	// 	background-size: cover;
-	// }
 }
 
 // MEDIA
 
-@import './_small';
-@import './_medium';
-@import './_large';
-@import './_xlarge';
+@import 'small';
+@import 'medium';
+@import 'large';
+@import 'xlarge';
