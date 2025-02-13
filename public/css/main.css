@@ -26,7 +26,7 @@ body {
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 3rem;
   transition: position 0.3s ease, background-color 0.3s ease;
 }
 .header__fixed {
@@ -100,6 +100,28 @@ body {
   color: #ffffff;
   font-size: 1.953rem;
 }
+.nav__desktop {
+  display: none;
+}
+.nav__desktop--list {
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__desktop--link {
+  font-size: 2.37rem;
+  color: rgb(26, 54, 49);
+  text-decoration: none;
+  padding: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.nav__desktop--link--fixed {
+  color: #ffffff;
+}
 
 .show-nav-header {
   z-index: 3;
@@ -129,6 +151,9 @@ body {
   align-items: center;
   height: 100vh; /* Full viewport height */
 }
+.opening__text {
+  padding-left: 3rem;
+}
 .opening__section {
   flex-grow: 1; /* Fills the remaining space */
   overflow: auto; /* Allows scrolling if content overflows */
@@ -139,12 +164,10 @@ body {
 .opening__title {
   font-size: 3.815rem;
   color: rgb(26, 54, 49);
-  margin: 1rem;
 }
 .opening__subtitle {
   font-size: 3.052rem;
   color: rgb(26, 54, 49);
-  margin: 1rem;
 }
 .opening__image {
   width: 100vw;
@@ -203,8 +226,15 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-top: 1px solid rgba(96, 115, 111, 0.5);
-  border-bottom: 1px solid rgba(96, 115, 111, 0.5);
+}
+.search__engine {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search__image {
+  display: none;
 }
 .search__input {
   width: 90vw;
@@ -254,11 +284,21 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.contact__image {
+  display: none;
+}
 .contact__title {
   text-align: left;
   width: 100%;
-  padding: 2rem;
+  padding-left: 3rem;
+  padding-bottom: 3rem;
   font-size: 1.953rem;
+}
+.contact__wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
 }
 .contact__item {
   width: 90vw;
@@ -315,6 +355,11 @@ body {
 .contact__button:focus {
   outline: none;
   background-color: #e4f225;
+}
+.contact__form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .footer {
@@ -493,6 +538,15 @@ body {
   background-color: #e4f225;
 }
 
+hr {
+  display: block;
+  border: none;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  margin: 20px auto;
+}
+
 @media (min-width: 576px) {
   .header__title {
     font-size: 4.2rem;
@@ -515,17 +569,20 @@ body {
   .about__item--bottom {
     font-size: 2.15rem;
   }
+  .footer__icon {
+    font-size: 3.35rem;
+  }
   .footer__textWrapper {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
   .thanks__title {
     font-size: 2.7rem;
   }
   .thanks__subtitle {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
   .thanks__signature {
-    font-size: 1.35rem;
+    font-size: 1.7rem;
   }
   .error__title {
     font-size: 4.2rem;
@@ -534,6 +591,168 @@ body {
     font-size: 2.7rem;
   }
   .error__text {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
+  }
+}
+@media (min-width: 768px) {
+  .header__title {
+    font-size: 4.62rem;
+  }
+  .header__icon {
+    font-size: 4.62rem;
+  }
+  .opening__title {
+    font-size: 4.62rem;
+  }
+  .opening__subtitle {
+    font-size: 3.69rem;
+  }
+  .about__item--top {
+    font-size: 2.97rem;
+  }
+  .about__item--bottom {
+    font-size: 2.37rem;
+  }
+  .search__section {
+    min-height: 50vh;
+  }
+  .search__input {
+    height: 50px;
+    font-size: 1.87rem;
+  }
+  .search__button {
+    height: 50px;
+    font-size: 1.87rem;
+  }
+  .contact__title {
+    font-size: 2.37rem;
+    padding-left: 5rem;
+  }
+  .contact__item {
+    height: 50px;
+  }
+  .contact__textarea {
+    height: 150px;
+  }
+  .contact__button {
+    height: 50px;
+    font-size: 1.87rem;
+  }
+  .footer__icon {
+    font-size: 3.69rem;
+  }
+  .footer__textWrapper {
+    font-size: 1.48rem;
+  }
+  .thanks__title {
+    font-size: 2.97rem;
+  }
+  .thanks__subtitle {
+    font-size: 1.48rem;
+  }
+  .thanks__signature {
+    font-size: 1.87rem;
+  }
+  .error__title {
+    font-size: 4.62rem;
+  }
+  .error__subtitle {
+    font-size: 2.97rem;
+  }
+  .error__text {
+    font-size: 1.48rem;
+  }
+}
+@media (min-width: 992px) {
+  .header {
+    padding: 5rem;
+  }
+  .header__hamburger {
+    display: none;
+  }
+  .nav__mobile {
+    display: none;
+  }
+  .opening__text {
+    padding-left: 5rem;
+  }
+  .about__section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .about__item {
+    width: 450px;
+    height: 250px;
+  }
+  .nav__desktop {
+    display: block;
+  }
+  .search__section {
+    height: 70vh;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .search__engine {
+    width: 50vw;
+  }
+  .search__image {
+    display: block;
+    width: 300px;
+    height: 300px;
+    background-image: url("/images/search_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .search__input {
+    width: 500px;
+    margin-bottom: 5rem;
+  }
+  .search__button {
+    width: 500px;
+  }
+  .contact__wrapper {
+    display: flex;
+  }
+  .contact__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-image: url("/images/contact_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .contact__item {
+    width: 500px;
+  }
+  .contact__button {
+    width: 500px;
+  }
+}
+@media (min-width: 1200px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__section {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about__item {
+    width: 500px;
+  }
+  .search__section {
+    width: 1200px;
+  }
+  .contact__section {
+    width: 1200px;
   }
 }/*# sourceMappingURL=main.css.map */

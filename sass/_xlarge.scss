@@ -1,3 +1,35 @@
 // _xlarge.scss
 @media (min-width: 1200px) {
+	.main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.about {
+		&__section {
+			width: 1200px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			// background-color: red;
+		}
+
+		&__item {
+			width: 500px;
+		}
+	}
+
+	.search {
+		&__section {
+			width: 1200px;
+		}
+	}
+
+	.contact {
+		&__section {
+			width: 1200px;
+		}
+	}
 }

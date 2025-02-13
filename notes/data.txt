@@ -1,4 +1,7 @@
 https://ramp.com/ 
+https://pixabay.com/illustrations/looking-for-find-internet-1013910/
+https://pixabay.com/illustrations/email-icon-mail-envelope-contact-1435687/
+https://pixabay.com/illustrations/business-card-contract-presentation-1020209/
 
 FontSizes:
 
@@ -12,7 +15,7 @@ h5 { font-size: 1.563rem; }
 h6 { font-size: 1.25rem; }
 p  { font-size: 1rem; }
 
-Medium:
+Small:
 
 @media (min-width: 576px) {
   h1 { font-size: 4.2rem; }
@@ -23,3 +26,13 @@ Medium:
   h6 { font-size: 1.35rem; }
   p  { font-size: 1.1rem; }
 }
+
+Medium:
+
+$medium-h1: 4.62rem;
+$medium-h2: 3.69rem;
+$medium-h3: 2.97rem;
+$medium-h4: 2.37rem;
+$medium-h5: 1.87rem;
+$medium-h6: 1.48rem;
+$medium-p: 1.21rem;

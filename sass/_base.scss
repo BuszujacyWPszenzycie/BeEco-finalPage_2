@@ -91,3 +91,9 @@
 		bottom: ($hamburger-layer-spacing + $hamburger-layer-height) * -1;
 	}
 }
+
+@media (min-width: 992px) {
+	.hamburger {
+		display: none;
+	}
+}

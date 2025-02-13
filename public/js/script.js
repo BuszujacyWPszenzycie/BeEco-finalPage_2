@@ -4,6 +4,7 @@ const navMobileTitle = document.querySelector('.header__title')
 const navMobile = document.querySelector('.nav__mobile')
 const body = document.querySelector('body')
 const header = document.querySelector('.header')
+const navDesktopLinks = document.querySelectorAll('.nav__desktop--link')
 
 const scrollThreshold = 0 // Adjust this value as needed
 
@@ -12,10 +13,13 @@ window.addEventListener('scroll', () => {
 		header.classList.add('header__fixed')
 		navMobileTitle.classList.add('header__title--fixed')
 		navMobileIcon.classList.add('header__icon--fixed')
+		navDesktopLinks.forEach(link => link.classList.add('nav__desktop--link--fixed'))
+		// navDesktopLink.classList.add('nav__desktop--link--fixed')
 	} else {
 		header.classList.remove('header__fixed')
 		navMobileTitle.classList.remove('header__title--fixed')
 		navMobileIcon.classList.remove('header__icon--fixed')
+		navDesktopLinks.forEach(link => link.classList.remove('nav__desktop--link--fixed'))
 	}
 })
 

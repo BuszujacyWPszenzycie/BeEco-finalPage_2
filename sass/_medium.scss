@@ -1,3 +1,107 @@
 // _medium.scss
+@use 'colors' as *;
+@use 'mixin' as *;
+@use 'fontsizes' as *;
+
 @media (min-width: 768px) {
+	.header {
+		&__title {
+			font-size: $medium-h1;
+		}
+
+		&__icon {
+			font-size: $medium-h1;
+		}
+	}
+
+	.opening {
+		&__title {
+			font-size: $medium-h1;
+		}
+
+		&__subtitle {
+			font-size: $medium-h2;
+		}
+	}
+
+	.about {
+		&__item--top {
+			font-size: $medium-h3;
+		}
+
+		&__item--bottom {
+			font-size: $medium-h4;
+		}
+	}
+
+	.search {
+		&__section {
+			min-height: 50vh;
+		}
+
+		&__input {
+			height: 50px;
+			font-size: $medium-h5;
+		}
+
+		&__button {
+			@include btnMedium;
+		}
+	}
+
+	.contact {
+		&__title {
+			font-size: $medium-h4;
+			padding-left: 5rem;
+		}
+
+		&__item {
+			height: 50px;
+		}
+
+		&__textarea {
+			height: 150px;
+		}
+
+		&__button {
+			@include btnMedium;
+		}
+	}
+
+	.footer {
+		&__icon {
+			font-size: $medium-h2;
+		}
+		&__textWrapper {
+			font-size: $medium-h6;
+		}
+	}
+
+	.thanks {
+		&__title {
+			font-size: $medium-h3;
+		}
+
+		&__subtitle {
+			font-size: $medium-h6;
+		}
+
+		&__signature {
+			font-size: $medium-h5;
+		}
+	}
+
+	.error {
+		&__title {
+			font-size: $medium-h1;
+		}
+
+		&__subtitle {
+			font-size: $medium-h3;
+		}
+
+		&__text {
+			font-size: $medium-h6;
+		}
+	}
 }

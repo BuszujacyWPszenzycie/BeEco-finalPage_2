@@ -37,3 +37,8 @@
 		background-color: $main-yellow;
 	}
 }
+
+@mixin btnMedium {
+	height: 50px;
+	font-size: $medium-h5;
+}

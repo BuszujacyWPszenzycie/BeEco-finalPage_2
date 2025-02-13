@@ -72,6 +72,11 @@
   bottom: -7px;
 }
 
+@media (min-width: 992px) {
+  .hamburger {
+    display: none;
+  }
+}
 /*
  * 3DX
  */

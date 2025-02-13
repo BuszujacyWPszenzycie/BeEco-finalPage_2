@@ -88,27 +88,41 @@
 
       </section>
 
+      <hr class="hr">
+
       <section class="search__section section" id="search">
 
-        <input type="text" class="search__input" placeholder="Wpisz słowa kluczowe">
-        <button class="search__button button">Wyszukaj!</button>
+        <div class="search__engine">
+          <input type="text" class="search__input" placeholder="Wpisz słowa kluczowe">
+          <button class="search__button button">Wyszukaj!</button>
+        </div>
+
+        <div class="search__image"></div>
 
       </section>
+
+      <hr class="hr">
 
       <section class="contact__section section" id="contact">
 
         <h4 class="contact__title">Masz sugestie? Napisz do nas!</h4>
 
-        <!-- <form action="/api/send-email" method="POST"> -->
-        <form action="/send-email" method="POST">
+        <div class="contact__wrapper">
 
-          <textarea name="message" id="" class="contact__item contact__textarea"
-            placeholder="Treść wiadomości"></textarea>
-          <input name="subject" type="text" class="contact__item contact__input" placeholder="Temat">
-          <input name="email" type="email" class="contact__item contact__input" placeholder="Mail">
-          <button class="contact__button button" type="submit">Wyślij</button>
+          <div class="contact__image"></div>
 
-        </form>
+          <!-- <form action="/api/send-email" method="POST"> -->
+          <form action="/send-email" method="POST" class="contact__form">
+
+            <textarea name="message" id="" class="contact__item contact__textarea"
+              placeholder="Treść wiadomości"></textarea>
+            <input name="subject" type="text" class="contact__item contact__input" placeholder="Temat">
+            <input name="email" type="email" class="contact__item contact__input" placeholder="Mail">
+            <button class="contact__button button" type="submit">Wyślij</button>
+
+          </form>
+
+        </div>
 
       </section>
 

@@ -38,6 +38,10 @@
 	}
 
 	.footer {
+		&__icon {
+			font-size: $small-h2;
+		}
+
 		&__textWrapper {
 			font-size: $small-h6;
 		}
