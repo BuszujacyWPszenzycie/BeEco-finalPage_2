@@ -144,9 +144,19 @@ body {
 			padding: 2rem;
 			text-transform: uppercase;
 			font-weight: bold;
+			transition: text-shadow 0.3s;
+
+			&:hover {
+				text-shadow: 0px 7px 14px rgba(66, 68, 90, 0.7);
+				// background-color: transparent;
+			}
 
 			&--fixed {
 				color: $white;
+				transition: text-shadow 0.3s;
+				&:hover {
+					text-shadow: 0px 7px 14px rgba(231, 231, 241, 0.7);
+				}
 			}
 		}
 	}
@@ -470,11 +480,12 @@ body {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		// justify-content: center;
 	}
 
 	&__textWrapper {
 		width: 90vw;
-		height: 40vh;
+		height: 250px;
 		background-color: $gray;
 		border-radius: 8px;
 		display: flex;
@@ -505,6 +516,10 @@ body {
 
 	&__link {
 		text-decoration: none;
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	&__icon {
@@ -522,6 +537,7 @@ body {
 
 	&__button {
 		@include btn;
+		display: block;
 	}
 }
 
@@ -533,6 +549,10 @@ body {
 		height: 80vh;
 		width: 100vw;
 		background-image: url('/images/error_small.jpg');
+		background-position: right;
+		// background-position: center;
+		background-repeat: no-repeat;
+		// background-size: cover;
 	}
 
 	&__title {
@@ -562,7 +582,7 @@ body {
 		position: absolute;
 		@include btn;
 
-		width: 150px;
+		width: 30vw;
 		bottom: 10px;
 	}
 }

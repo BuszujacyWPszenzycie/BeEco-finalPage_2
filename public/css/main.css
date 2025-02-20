@@ -118,9 +118,17 @@ body {
   padding: 2rem;
   text-transform: uppercase;
   font-weight: bold;
+  transition: text-shadow 0.3s;
+}
+.nav__desktop--link:hover {
+  text-shadow: 0px 7px 14px rgba(66, 68, 90, 0.7);
 }
 .nav__desktop--link--fixed {
   color: #ffffff;
+  transition: text-shadow 0.3s;
+}
+.nav__desktop--link--fixed:hover {
+  text-shadow: 0px 7px 14px rgba(231, 231, 241, 0.7);
 }
 
 .show-nav-header {
@@ -423,7 +431,7 @@ body {
 }
 .thanks__textWrapper {
   width: 90vw;
-  height: 40vh;
+  height: 250px;
   background-color: #efefef;
   border-radius: 8px;
   display: flex;
@@ -449,6 +457,10 @@ body {
 }
 .thanks__link {
   text-decoration: none;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .thanks__icon {
   font-size: 6rem;
@@ -473,6 +485,7 @@ body {
   transition: opacity 0.4s, transform 0.4s;
   cursor: pointer;
   font-size: 1.563rem;
+  display: block;
 }
 .thanks__button:hover {
   opacity: 0.85;
@@ -490,6 +503,8 @@ body {
   height: 80vh;
   width: 100vw;
   background-image: url("/images/error_small.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
 }
 .error__title {
   position: absolute;
@@ -524,7 +539,7 @@ body {
   transition: opacity 0.4s, transform 0.4s;
   cursor: pointer;
   font-size: 1.563rem;
-  width: 150px;
+  width: 30vw;
   bottom: 10px;
 }
 .error__button:hover {
@@ -748,11 +763,79 @@ hr {
   }
   .about__item {
     width: 500px;
+    height: 300px;
   }
   .search__section {
     width: 1200px;
   }
   .contact__section {
     width: 1200px;
+  }
+  .header__title {
+    font-size: 5.08rem;
+  }
+  .header__icon {
+    font-size: 5.08rem;
+  }
+  .opening__title {
+    font-size: 5.08rem;
+  }
+  .opening__subtitle {
+    font-size: 4.06rem;
+  }
+  .about__item--top {
+    font-size: 3.27rem;
+  }
+  .about__item--bottom {
+    font-size: 2.61rem;
+  }
+  .search__section {
+    min-height: 50vh;
+  }
+  .search__input {
+    height: 50px;
+    font-size: 2.06rem;
+  }
+  .search__button {
+    height: 60px;
+    font-size: 2.06rem;
+  }
+  .contact__title {
+    font-size: 2.61rem;
+    padding-left: 5rem;
+  }
+  .contact__item {
+    height: 60px;
+  }
+  .contact__textarea {
+    height: 150px;
+  }
+  .contact__button {
+    height: 60px;
+    font-size: 2.06rem;
+  }
+  .footer__icon {
+    font-size: 4.06rem;
+  }
+  .footer__textWrapper {
+    font-size: 1.63rem;
+  }
+  .thanks__title {
+    font-size: 3.27rem;
+  }
+  .thanks__subtitle {
+    font-size: 1.63rem;
+  }
+  .thanks__signature {
+    font-size: 2.06rem;
+  }
+  .error__title {
+    font-size: 5.08rem;
+  }
+  .error__subtitle {
+    font-size: 3.27rem;
+  }
+  .error__text {
+    font-size: 1.63rem;
   }
 }/*# sourceMappingURL=main.css.map */

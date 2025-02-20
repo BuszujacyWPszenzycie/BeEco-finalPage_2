@@ -42,3 +42,8 @@
 	height: 50px;
 	font-size: $medium-h5;
 }
+
+@mixin btnxLarge {
+	height: 60px;
+	font-size: $large-h5;
+}

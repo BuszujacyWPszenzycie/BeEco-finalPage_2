@@ -1,4 +1,4 @@
-// _xlarge.scss
+// _large.scss
 @media (min-width: 1200px) {
 	.main {
 		display: flex;
@@ -13,11 +13,11 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			// background-color: red;
 		}
 
 		&__item {
 			width: 500px;
+			height: 300px;
 		}
 	}
 
@@ -30,6 +30,107 @@
 	.contact {
 		&__section {
 			width: 1200px;
+		}
+	}
+
+	.header {
+		&__title {
+			font-size: $large-h1;
+		}
+
+		&__icon {
+			font-size: $large-h1;
+		}
+	}
+
+	.opening {
+		&__title {
+			font-size: $large-h1;
+		}
+
+		&__subtitle {
+			font-size: $large-h2;
+		}
+	}
+
+	.about {
+		&__item--top {
+			font-size: $large-h3;
+		}
+
+		&__item--bottom {
+			font-size: $large-h4;
+		}
+	}
+
+	.search {
+		&__section {
+			min-height: 50vh;
+		}
+
+		&__input {
+			height: 50px;
+			font-size: $large-h5;
+		}
+
+		&__button {
+			@include btnxLarge;
+		}
+	}
+
+	.contact {
+		&__title {
+			font-size: $large-h4;
+			padding-left: 5rem;
+		}
+
+		&__item {
+			height: 60px;
+		}
+
+		&__textarea {
+			height: 150px;
+		}
+
+		&__button {
+			@include btnxLarge;
+		}
+	}
+
+	.footer {
+		&__icon {
+			font-size: $large-h2;
+		}
+		&__textWrapper {
+			font-size: $large-h6;
+		}
+	}
+
+	.thanks {
+		&__title {
+			font-size: $large-h3;
+		}
+
+		&__subtitle {
+			font-size: $large-h6;
+		}
+
+		&__signature {
+			font-size: $large-h5;
+		}
+	}
+
+	.error {
+		&__title {
+			font-size: $large-h1;
+		}
+
+		&__subtitle {
+			font-size: $large-h3;
+		}
+
+		&__text {
+			font-size: $large-h6;
 		}
 	}
 }
