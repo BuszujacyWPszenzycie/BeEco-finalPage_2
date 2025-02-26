@@ -1,6 +1,55 @@
 <%- include('./includes/head.ejs') %>
 
-  <%- include('./includes/navigation.ejs') %>
 
 
-    <%- include('./includes/footer.ejs') %>
+  <section class="section results__section">
+
+    <h2 class="results__introduction">
+      Ta strona jest projektem hobbystycznym, a zamieszczone na niej informacje służą wyłącznie jako wskazówki. Nie
+      stanowią one ostatecznej wyroczni w kwestii segregacji odpadów. Przed podjęciem decyzji o ich właściwym wyrzuceniu
+      zalecamy skonsultowanie się z lokalnym odbiorcą odpadów.
+    </h2>
+
+    <div class="results__itemsWrapper">
+
+      <% foundItems.forEach(item=> { %>
+        <div class="results__item">
+          <img class="results__item--image" src="<%= item.itemImgUrl %>" alt="<%= item.name %>">
+          <h3 class="results__item--name">
+            <%= item.itemName %>
+          </h3>
+          <h4 class="results__item--type">
+            <%= item.itemType %>
+          </h4>
+          <p class="results__item--description">
+            <%= item.itemDescription %>
+          </p>
+          <p class="results__item--tags">
+            <%= item.itemTags %>
+          </p>
+          <p class="results__item--localization">
+            <%= item.itemLocalization %>
+          </p>
+        </div>
+        <% }) %>
+
+          <!-- <div class="results__item">
+        <img class="results__item--image"
+          src="https://raw.githubusercontent.com/BuszujacyWPszenzycie/BeEco_images/main/PrincePolo.jpg" alt="Obraz" />
+        <h3 class="results__item--name">Nazwa</h3>
+        <h4 class="results__item--type">Typ</h4>
+        <p class="results__item--description">Opis</p>
+        <p class="results__item--tags">Tagi</p>
+      </div> -->
+
+
+          <div class="results__buttonWrapper">
+            <a href="/" class="results__link">
+              <button class="results__button button">Powrót</button>
+            </a>
+          </div>
+
+  </section>
+
+
+  <%- include('./includes/footer.ejs') %>

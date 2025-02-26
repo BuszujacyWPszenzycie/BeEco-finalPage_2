@@ -11,13 +11,20 @@ const trashSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	description: {
+	itemDescription: {
 		type: String,
 		required: true,
 	},
-	localization: {
+	itemLocalization: {
 		type: String,
 		required: true,
+	},
+	itemImgUrl: {
+		type: String,
+		required: true,
+	},
+	itemTags: {
+		type: String,
 	},
 })
 

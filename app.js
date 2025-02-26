@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 const helmet = require('helmet')
 const compression = require('compression')
 const morgan = require('morgan')
+const flash = require('connect-flash')
 
 const errorController = require('./controllers/errorController')
 
@@ -30,7 +31,12 @@ app.use(
 			directives: {
 				defaultSrc: ["'self'"],
 				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
-				imgSrc: ["'self'", 'https://lezebre.lu'],
+				imgSrc: [
+					"'self'",
+					// 'https://lezebre.lu',
+					'https://raw.githubusercontent.com', // GitHub raw content
+					'https://githubusercontent.com', // Dodatkowy alias GitHub
+				],
 			},
 		},
 	})
@@ -57,19 +63,19 @@ const PORT = process.env.PORT || 3000
 
 // Uruchomoć jak będzie potrzebne połączenie z bazą danych
 
-// mongoose
-// 	.connect(MONGODB_URI)
-// 	.then(() => {
-// 		// Start the server once connected to the database
-// 		const PORT = process.env.PORT || 3000
-// 		app.listen(PORT, () => {
-// 			// console.log(`Server is running on http://localhost:${PORT}`)
-// 		})
-// 	})
-// 	.catch(err => {
-// 		console.error('MongoDB connection error:', err)
-// 	})
+mongoose
+	.connect(MONGODB_URI)
+	.then(() => {
+		// Start the server once connected to the database
+		const PORT = process.env.PORT || 3000
+		app.listen(PORT, () => {
+			// console.log(`Server is running on http://localhost:${PORT}`)
+		})
+	})
+	.catch(err => {
+		console.error('MongoDB connection error:', err)
+	})
 
-app.listen(PORT, () => {
-	// console.log(`Server is running on http://localhost:${PORT}`)
-})
+// app.listen(PORT, () => {
+// 	// console.log(`Server is running on http://localhost:${PORT}`)
+// })

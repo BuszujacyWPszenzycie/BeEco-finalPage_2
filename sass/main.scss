@@ -385,6 +385,11 @@ body {
 			outline: none;
 			border: 1px solid rgba(96, 115, 111);
 		}
+
+		&.error-input {
+			border-color: $error-border-color;
+			background-color: $error-background-color;
+		}
 	}
 
 	&__textarea {
@@ -406,6 +411,17 @@ body {
 		display: flex;
 		justify-content: center;
 		flex-direction: column;
+	}
+
+	&__text {
+		display: none;
+		padding-left: 3rem;
+
+		&.error-text {
+			display: block;
+			color: $error-text-color;
+			font-size: $small-h6;
+		}
 	}
 }
 
@@ -586,6 +602,81 @@ body {
 		bottom: 10px;
 	}
 }
+
+// RESULTS
+
+.results {
+	&__section {
+		min-height: 100vh;
+	}
+
+	&__itemsWrapper {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__item {
+		margin-top: 2rem;
+		padding: 1rem;
+		background-color: $light-gray;
+		border: 1px solid $gray;
+		border-radius: 10px;
+
+		&--image {
+			width: 90vw;
+			height: 50vw;
+			border-radius: 10px;
+			// background-image: url('https://raw.githubusercontent.com/BuszujacyWPszenzycie/BeEco_images/main/PrincePolo.jpg');
+			// background-color: red;
+			background-image: url('https://drive.google.com/uc?export=view&id=1WZb4lb46PBdiHoXzb2inh3KfzYlUL9A8');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		&--name {
+			margin-top: 1rem;
+		}
+
+		&--type {
+			margin-top: 1rem;
+		}
+
+		&--description {
+			margin-top: 1rem;
+		}
+
+		&--tags {
+			margin-top: 1rem;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		width: 100vw;
+		display: flex;
+		// justify-content: center;
+		align-items: center;
+	}
+
+	&__buttonWrapper {
+		width: 100%;
+		display: flex;
+		align-items: start;
+		cursor: pointer;
+		transition: transform 0.6s ease, color 0.6s ease;
+	}
+
+	&__button {
+		@include btn;
+		display: block;
+		width: 30vw;
+	}
+}
+
 hr {
 	// opacity: 1;
 	display: block;

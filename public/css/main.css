@@ -331,6 +331,10 @@ body {
   outline: none;
   border: 1px solid rgb(96, 115, 111);
 }
+.contact__item.error-input {
+  border-color: rgba(255, 0, 0, 0.6);
+  background-color: rgba(255, 0, 0, 0.1);
+}
 .contact__textarea {
   height: 100px;
   border: 1px solid rgba(96, 115, 111, 0.2);
@@ -368,6 +372,15 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+.contact__text {
+  display: none;
+  padding-left: 3rem;
+}
+.contact__text.error-text {
+  display: block;
+  color: rgba(255, 0, 0, 0.9);
+  font-size: 1.35rem;
 }
 
 .footer {
@@ -549,6 +562,83 @@ body {
   transform: scale(1.05);
 }
 .error__button:focus {
+  outline: none;
+  background-color: #e4f225;
+}
+
+.results__section {
+  min-height: 100vh;
+}
+.results__itemsWrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.results__item {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgb(205, 211, 210);
+  border: 1px solid #efefef;
+  border-radius: 10px;
+}
+.results__item--image {
+  width: 90vw;
+  height: 50vw;
+  border-radius: 10px;
+  background-image: url("https://raw.githubusercontent.com/BuszujacyWPszenzycie/BeEco_images/main/PrincePolo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.results__item--name {
+  margin-top: 1rem;
+}
+.results__item--type {
+  margin-top: 1rem;
+}
+.results__item--description {
+  margin-top: 1rem;
+}
+.results__item--tags {
+  margin-top: 1rem;
+}
+.results__link {
+  text-decoration: none;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.results__buttonWrapper {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  cursor: pointer;
+  transition: transform 0.6s ease, color 0.6s ease;
+}
+.results__button {
+  width: 90vw;
+  height: 40px;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: #f5ff78;
+  border-radius: 5px;
+  border: none;
+  margin: 2rem;
+  transition: opacity 0.4s, transform 0.4s;
+  cursor: pointer;
+  font-size: 1.563rem;
+  display: block;
+  width: 30vw;
+}
+.results__button:hover {
+  opacity: 0.85;
+}
+.results__button:active {
+  transform: scale(1.05);
+}
+.results__button:focus {
   outline: none;
   background-color: #e4f225;
 }

@@ -8,6 +8,13 @@ exports.getIndex = (req, res, next) => {
 	})
 }
 
+exports.getSearchResults = (req, res, next) => {
+	res.render('search-results', {
+		path: '/search-results',
+		pageTitle: 'Wyniki wyszukiwania',
+	})
+}
+
 // SEARCH ITEMS
 
 exports.searchItems = (req, res, next) => {
