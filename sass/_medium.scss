@@ -104,4 +104,41 @@
 			font-size: $medium-h6;
 		}
 	}
+
+	.results {
+		&__introduction {
+			padding: 2rem;
+			padding-bottom: 1rem;
+			font-size: $medium-h5;
+		}
+
+		&__textWrapper {
+			padding: 2rem;
+		}
+
+		&__item {
+			&--name {
+				font-size: $medium-h5;
+			}
+			&--type {
+				margin-top: 1rem;
+				font-size: $medium-p;
+			}
+
+			&--description {
+				margin-top: 1rem;
+				font-size: $medium-p;
+			}
+
+			&--tags {
+				margin-top: 1rem;
+				font-size: $medium-p;
+			}
+
+			&--localization {
+				margin-top: 1rem;
+				font-size: $medium-p;
+			}
+		}
+	}
 }
