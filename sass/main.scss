@@ -627,6 +627,12 @@ body {
 		font-size: $basic-h5;
 	}
 
+	&__searchValue {
+		font-weight: bold;
+		text-transform: uppercase;
+		color: $main-green;
+	}
+
 	&__itemsWrapper {
 		height: 100%;
 		width: 100%;

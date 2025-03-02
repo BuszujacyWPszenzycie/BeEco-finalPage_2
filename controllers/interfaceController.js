@@ -22,6 +22,31 @@ exports.getAllItems = (req, res) => {
 		})
 }
 
+exports.getResults = (req, res) => {
+	const searchValue = req.query.searchValue?.trim() // Pobranie wartości i usunięcie białych znaków
+
+	const query = searchValue
+		? {
+				$or: [
+					{ itemName: new RegExp(searchValue, 'i') },
+					{ itemType: new RegExp(searchValue, 'i') },
+					{ itemDescription: new RegExp(searchValue, 'i') },
+					{ itemLocalization: new RegExp(searchValue, 'i') },
+					{ itemTags: new RegExp(searchValue, 'i') },
+				],
+		  }
+		: {} // Jeśli brak searchValue, zwracamy wszystkie elementy
+
+	Item.find(query)
+		.then(results => {
+			res.render('search-results', { pageTitle: 'Twoje wyszukania', foundItems: results, searchValue })
+		})
+		.catch(error => {
+			console.error('Błąd podczas wyszukiwania:', error)
+			res.status(500).json({ message: 'Wystąpił błąd serwera' })
+		})
+}
+
 // exports.getSearchResults = (req, res, next) => {
 // 	res.render('search-results', {
 // 		path: '/search-results',

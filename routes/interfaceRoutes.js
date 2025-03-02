@@ -6,8 +6,6 @@ router.get('/', interfaceController.getIndex)
 
 // router.get('/search', interfaceController.searchItems)
 
-router.get('/search-results', interfaceController.getAllItems)
-
-router.post('/search-results', interfaceController.getAllItems)
+router.get('/search-results', interfaceController.getResults)
 
 module.exports = router
