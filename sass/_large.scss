@@ -100,49 +100,49 @@
 		}
 	}
 
-	.results {
-		&__introduction {
-			padding: 2rem;
-			padding-bottom: 1rem;
-			font-size: $large-h5;
-		}
+	// .results {
+	// 	&__introduction {
+	// 		padding: 2rem;
+	// 		padding-bottom: 1rem;
+	// 		font-size: $large-h5;
+	// 	}
 
-		&__itemsWrapper {
-			width: 100%;
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
+	// 	&__itemsWrapper {
+	// 		width: 100%;
+	// 		flex-direction: row;
+	// 		flex-wrap: wrap;
+	// 	}
 
-		&__textWrapper {
-			padding: 2rem;
-		}
+	// 	&__textWrapper {
+	// 		padding: 2rem;
+	// 	}
 
-		&__item {
-			width: 50%;
-			height: auto;
-			border: none;
-			&--name {
-				font-size: $large-h5;
-			}
-			&--type {
-				margin-top: 1rem;
-				font-size: $large-p;
-			}
+	// 	&__item {
+	// 		width: 50%;
+	// 		height: auto;
+	// 		border: none;
+	// 		&--name {
+	// 			font-size: $large-h5;
+	// 		}
+	// 		&--type {
+	// 			margin-top: 1rem;
+	// 			font-size: $large-p;
+	// 		}
 
-			&--description {
-				margin-top: 1rem;
-				font-size: $large-p;
-			}
+	// 		&--description {
+	// 			margin-top: 1rem;
+	// 			font-size: $large-p;
+	// 		}
 
-			&--tags {
-				margin-top: 1rem;
-				font-size: $large-p;
-			}
+	// 		&--tags {
+	// 			margin-top: 1rem;
+	// 			font-size: $large-p;
+	// 		}
 
-			&--localization {
-				margin-top: 1rem;
-				font-size: $large-p;
-			}
-		}
-	}
+	// 		&--localization {
+	// 			margin-top: 1rem;
+	// 			font-size: $large-p;
+	// 		}
+	// 	}
+	// }
 }

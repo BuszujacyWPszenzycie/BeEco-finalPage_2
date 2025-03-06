@@ -1,0 +1,58 @@
+<%- include('./includes/head.ejs') %>
+
+  <section class="section results__section">
+
+    <div class="results__introductionWrapper">
+      <h5 class="results__introduction"><strong>Hej!</strong></h5>
+
+      <h5 class="results__introduction">Poniżej znajdziesz wyniki wyszukiwania dla słowa kluczowego: <span
+          class="results__searchValue">
+          <%= searchValue %>.
+        </span>Krótka
+        uwaga z mojej strony</h5>
+      <h5 class="results__introduction">
+        Ta strona jest projektem hobbystycznym, a zamieszczone na niej informacje służą wyłącznie jako wskazówki. Nie
+        stanowią one ostatecznej wyroczni w kwestii segregacji odpadów. Przed podjęciem decyzji o ich właściwym
+        wyrzuceniu
+        zalecamy skonsultowanie się z lokalnym odbiorcą odpadów.
+      </h5>
+    </div>
+
+    <div class="results__itemsWrapper">
+
+      <% foundItems.forEach(item=> { %>
+        <div class="results__item">
+          <img class="results__item--image" src="<%= item.itemImgUrl %>" alt="<%= item.name %>">
+
+          <div class="results__textWrapper">
+            <h5 class="results__item--name">
+              <%= item.itemName %>
+            </h5>
+            <p class="results__item--description">
+              <%= item.itemDescription %>
+            </p>
+            <p class="results__item--type"><strong>Typ:</strong>
+              <%= item.itemType %>
+            </p>
+            <p class="results__item--tags"><strong>Tagi:</strong>
+              <%= item.itemTags %>
+            </p>
+            <p class="results__item--localization"><strong>Lokalizacja:</strong>
+              <%= item.itemLocalization %>
+            </p>
+
+          </div>
+
+        </div>
+        <% }) %>
+
+          <div class="results__buttonWrapper">
+            <a href="/" class="results__link">
+              <button class="results__button button">Powrót</button>
+            </a>
+          </div>
+
+  </section>
+
+
+  <%- include('./includes/footer.ejs') %>

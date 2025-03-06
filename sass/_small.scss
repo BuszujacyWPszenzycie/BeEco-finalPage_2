@@ -75,40 +75,40 @@
 		}
 	}
 
-	.results {
-		&__introduction {
-			padding: 2rem;
-			padding-bottom: 1rem;
-			font-size: $small-h5;
-		}
+	// .results {
+	// 	&__introduction {
+	// 		padding: 2rem;
+	// 		padding-bottom: 1rem;
+	// 		font-size: $small-h5;
+	// 	}
 
-		&__textWrapper {
-			padding: 2rem;
-		}
+	// 	&__textWrapper {
+	// 		padding: 2rem;
+	// 	}
 
-		&__item {
-			&--name {
-				font-size: $small-h5;
-			}
-			&--type {
-				margin-top: 1rem;
-				font-size: $small-p;
-			}
-	
-			&--description {
-				margin-top: 1rem;
-				font-size: $small-p;
-			}
-	
-			&--tags {
-				margin-top: 1rem;
-				font-size: $small-p;
-			}
-	
-			&--localization {
-				margin-top: 1rem;
-				font-size: $small-p;
-			}
-		}
-	}
+	// 	&__item {
+	// 		&--name {
+	// 			font-size: $small-h5;
+	// 		}
+	// 		&--type {
+	// 			margin-top: 1rem;
+	// 			font-size: $small-p;
+	// 		}
+
+	// 		&--description {
+	// 			margin-top: 1rem;
+	// 			font-size: $small-p;
+	// 		}
+
+	// 		&--tags {
+	// 			margin-top: 1rem;
+	// 			font-size: $small-p;
+	// 		}
+
+	// 		&--localization {
+	// 			margin-top: 1rem;
+	// 			font-size: $small-p;
+	// 		}
+	// 	}
+	// }
 }
