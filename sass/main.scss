@@ -645,6 +645,13 @@ body {
 			// align-items: center;
 		}
 
+		&--secondImgWrapper {
+			overflow: hidden;
+			border-radius: 10px;
+			height: 100%;
+			background-color: red;
+		}
+
 		&--topText {
 			flex: 4;
 			height: 100%;
@@ -660,7 +667,7 @@ body {
 			object-position: left;
 			object-position: top;
 
-			filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5)); // Dodaje cień do obrazu
+			// filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5)); // Dodaje cień do obrazu
 		}
 
 		&--text {

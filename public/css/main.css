@@ -599,6 +599,12 @@ body {
   overflow: hidden;
   border-radius: 10px;
 }
+.results__item--secondImgWrapper {
+  overflow: hidden;
+  border-radius: 10px;
+  height: 100%;
+  background-color: red;
+}
 .results__item--topText {
   flex: 4;
   height: 100%;
@@ -615,7 +621,6 @@ body {
      object-position: left;
   -o-object-position: top;
      object-position: top;
-  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
 }
 .results__item--text {
   padding-bottom: 1rem;
