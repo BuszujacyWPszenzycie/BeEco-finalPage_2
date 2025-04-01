@@ -1,51 +1,89 @@
 <%- include('./includes/head.ejs') %>
 
-  <section class="section results__section">
+  <div class="results__wrapper">
 
-    <div class="results__item">
+    <section class="section results__section">
+      <% if (foundItems.length> 0) { %>
+        <% foundItems.forEach(item=> { %>
 
-      <div class="results__item--top">
+          <div class="results__item">
 
-        <div class="results__item--imgWrapper">
-          <div class="results__item--secondImgWrapper">
-            <img class="results__item--img"
-              src="https://raw.githubusercontent.com/BuszujacyWPszenzycie/BeEco_images/main/1_PrincePolo.jpg" alt="">
+            <div class="results__item--top">
+
+              <div class="results__item--imgWrapper">
+                <div class="results__item--secondImgWrapper">
+                  <img class="results__item--img" src="<%= item.itemImgUrl %>?raw=true" alt="<%= item.itemName %>">
+
+
+                </div>
+              </div>
+              <div class="results__item--topText">
+                <p class="results__item--name results__item--text"><strong>Nazwa:&nbsp;</strong>
+                  <%= item.itemName %>
+                </p>
+                <p class="results__item--type results__item--text"><strong>Typ:&nbsp;</strong>
+                  <%= item.itemType %>
+                </p>
+                <p class="results__item--localization results__item--text"><strong>Lokalizacja:&nbsp;</strong>
+                  <%= item.itemLocalization %>
+                </p>
+                <p class="results__item--tags results__item--text"><strong>Tagi:&nbsp;</strong>
+                  <%= item.itemTags %>
+                </p>
+              </div>
+
+            </div>
+
+            <div class="results__item--bottom">
+              <h6 class="results__item--title">Co zrobić z odpadem?</h6>
+              <p class="results__item--description">
+                <%= item.itemDescription %>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="results__item--topText">
-          <p class="results__item--name results__item--text"><strong>Nazwa:&nbsp;</strong>Butelka plastikowa</p>
-          <p class="results__item--type results__item--text"><strong>Typ:&nbsp;</strong> Plastik</p>
-          <p class="results__item--localization results__item--text"><strong>Lokalizacja:&nbsp;</strong>Poznań</p>
-          <p class="results__item--localization results__item--text"><strong>Tagi:&nbsp;</strong>Sport, Eko</p>
-        </div>
 
-      </div>
-    </div>
+          <% }) %>
+            <% } else { %>
+              <div class="results__nothing">
+                <div class="results__nothing--img"></div>
+                <h3 class="results__nothing--title">Niestety, nic nie znalazłem!
+                </h3>
+                <h3 class="results__nothing--title">Spróbuj użyć innych słów kluczowych.</h3>
+              </div>
 
-
-    <div class="results__item">
+              <% } %>
+                <!-- <div class="results__item">
 
       <div class="results__item--top">
 
         <div class="results__item--imgWrapper">
           <div class="results__item--secondImgWrapper">
             <img class="results__item--img"
-              src="https://raw.githubusercontent.com/BuszujacyWPszenzycie/BeEco_images/main/2_Bidon_plastikowy.jpg"
+              src="https://github.com/BuszujacyWPszenzycie/BeEco_images/blob/main/1_PrincePolo_mleczne_XXL.png?raw=true"
               alt="">
 
-          </div>
 
+          </div>
         </div>
         <div class="results__item--topText">
           <p class="results__item--name results__item--text"><strong>Nazwa:&nbsp;</strong>Butelka plastikowa</p>
           <p class="results__item--type results__item--text"><strong>Typ:&nbsp;</strong> Plastik</p>
           <p class="results__item--localization results__item--text"><strong>Lokalizacja:&nbsp;</strong>Poznań</p>
-          <p class="results__item--localization results__item--text"><strong>Tagi:&nbsp;</strong>Sport, Eko</p>
+          <p class="results__item--tags results__item--text"><strong>Tagi:&nbsp;</strong>Sport, Eko</p>
         </div>
 
       </div>
-    </div>
 
-  </section>
+      <div class="results__item--bottom">
+        <h6 class="results__item--title">Co zrobić z odpadem?</h6>
+        <p class="results__item--description">Wafelelka proponuję zjeść natomiast opakowanie należy wrzucić do żółtego
+          pojemnika przeznaczonego na plastik i metale. Jeżeli nie damy rady zjeść całego wafelka, wtedy radzę zostawić
+          go na później. Jeżeli to także nie jest możliwe należy go wrzucić do pojemnika na śmieci zmieszane.</p>
+      </div>
+    </div> -->
+
+    </section>
+
+  </div>
 
   <%- include('./includes/footer.ejs') %>

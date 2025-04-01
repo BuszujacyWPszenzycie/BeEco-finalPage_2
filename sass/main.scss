@@ -22,6 +22,7 @@ html {
 body {
 	font-size: 1rem;
 	font-family: 'Jura', serif;
+
 	// scroll-padding-top: 15vh;
 	// background-color: $main-green;
 }
@@ -605,30 +606,47 @@ body {
 // RESULTS_NEW
 
 .results {
+	&__wrapper {
+		width: 100vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		// background-color: red;
+	}
 	&__section {
 		min-height: 100vh;
-		width: 100vw;
-		padding: 3rem;
+		max-width: 1200px;
+
+		// padding: 3rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		justify-content: center;
 	}
 
 	&__item {
-		border: 1px solid rgba(0, 0, 0, 0.3);
-		width: 100%;
+		width: 90%;
 		height: 50vh;
 		border-radius: 10px;
 		margin: 2rem;
 		display: flex; // Aktywuje flexbox dla dzieci
-		flex-direction: row;
-		// gap: 1rem; // Dodaje odstęp między nimi
+		flex-direction: column;
 		justify-content: space-between; // Zapewnia równomierne rozmieszczenie
+		background-color: $gray;
+		transition: box-shadow 0.4s;
+
+		&:hover {
+			box-shadow: 11px 9px 43px 7px rgba(28, 27, 23, 0.3);
+		}
 
 		&--top {
 			width: 100%;
 			height: 60%;
 			display: flex;
+		}
+
+		&--bottom {
+			height: 40%;
 		}
 
 		&--imgWrapper {
@@ -640,21 +658,24 @@ body {
 			padding: 1rem;
 			overflow: hidden;
 			border-radius: 10px;
-			// border: 1px solid black;
-			// justify-content: center;
-			// align-items: center;
+			justify-content: center;
+			position: relative;
 		}
 
 		&--secondImgWrapper {
 			overflow: hidden;
 			border-radius: 10px;
 			height: 100%;
-			background-color: red;
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
 		&--topText {
 			flex: 4;
 			height: 100%;
+			width: 100%;
 			padding: 1rem;
 			display: flex;
 			flex-direction: column;
@@ -664,18 +685,54 @@ body {
 			width: 100%;
 			height: 100%;
 			object-fit: contain;
-			object-position: left;
-			object-position: top;
-
-			// filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5)); // Dodaje cień do obrazu
+			object-position: center;
 		}
 
 		&--text {
 			padding-bottom: 1rem;
+			font-size: $basic-p;
 		}
 
 		&--name {
 			padding-top: 3rem;
+		}
+
+		&--title {
+			padding-left: 2rem;
+			padding-bottom: 1rem;
+			font-size: $basic-h6;
+		}
+
+		&--description {
+			padding-left: 2rem;
+			padding-right: 2rem;
+			padding-bottom: 1rem;
+			font-size: $basic-p;
+		}
+	}
+
+	&__nothing {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100vh;
+		// background-color: red;
+		&--img {
+			margin: 3rem;
+			background-image: url('/images/search_2.jpg');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: contain;
+			height: 50vh;
+			width: 90%;
+		}
+
+		&--title {
+			// background-color: blue;
+			font-size: $basic-h3;
+			padding: 1rem;
+			width: 90%;
 		}
 	}
 }

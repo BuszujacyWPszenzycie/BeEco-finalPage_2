@@ -105,40 +105,19 @@
 		}
 	}
 
-	// .results {
-	// 	&__introduction {
-	// 		padding: 2rem;
-	// 		padding-bottom: 1rem;
-	// 		font-size: $medium-h5;
-	// 	}
+	.results {
+		&__item {
+			&--text {
+				font-size: $medium-p;
+			}
 
-	// 	&__textWrapper {
-	// 		padding: 2rem;
-	// 	}
+			&--title {
+				font-size: $medium-p;
+			}
 
-	// 	&__item {
-	// 		&--name {
-	// 			font-size: $medium-h5;
-	// 		}
-	// 		&--type {
-	// 			margin-top: 1rem;
-	// 			font-size: $medium-p;
-	// 		}
-
-	// 		&--description {
-	// 			margin-top: 1rem;
-	// 			font-size: $medium-p;
-	// 		}
-
-	// 		&--tags {
-	// 			margin-top: 1rem;
-	// 			font-size: $medium-p;
-	// 		}
-
-	// 		&--localization {
-	// 			margin-top: 1rem;
-	// 			font-size: $medium-p;
-	// 		}
-	// 	}
-	// }
+			&--description {
+				font-size: $medium-p;
+			}
+		}
+	}
 }

@@ -35,31 +35,31 @@
 
 	.header {
 		&__title {
-			font-size: $large-h1;
+			font-size: $xlarge-h1;
 		}
 
 		&__icon {
-			font-size: $large-h1;
+			font-size: $xlarge-h1;
 		}
 	}
 
 	.opening {
 		&__title {
-			font-size: $large-h1;
+			font-size: $xlarge-h1;
 		}
 
 		&__subtitle {
-			font-size: $large-h2;
+			font-size: $xlarge-h2;
 		}
 	}
 
 	.about {
 		&__item--top {
-			font-size: $large-h3;
+			font-size: $xlarge-h3;
 		}
 
 		&__item--bottom {
-			font-size: $large-h4;
+			font-size: $xlarge-h4;
 		}
 	}
 
@@ -70,7 +70,7 @@
 
 		&__input {
 			height: 50px;
-			font-size: $large-h5;
+			font-size: $xlarge-h5;
 		}
 
 		&__button {
@@ -80,7 +80,7 @@
 
 	.contact {
 		&__title {
-			font-size: $large-h4;
+			font-size: $xlarge-h4;
 			padding-left: 5rem;
 		}
 
@@ -99,38 +99,54 @@
 
 	.footer {
 		&__icon {
-			font-size: $large-h2;
+			font-size: $xlarge-h2;
 		}
 		&__textWrapper {
-			font-size: $large-h6;
+			font-size: $xlarge-h6;
 		}
 	}
 
 	.thanks {
 		&__title {
-			font-size: $large-h3;
+			font-size: $xlarge-h3;
 		}
 
 		&__subtitle {
-			font-size: $large-h6;
+			font-size: $xlarge-h6;
 		}
 
 		&__signature {
-			font-size: $large-h5;
+			font-size: $xlarge-h5;
 		}
 	}
 
 	.error {
 		&__title {
-			font-size: $large-h1;
+			font-size: $xlarge-h1;
 		}
 
 		&__subtitle {
-			font-size: $large-h3;
+			font-size: $xlarge-h3;
 		}
 
 		&__text {
-			font-size: $large-h6;
+			font-size: $xlarge-h6;
+		}
+	}
+
+	.results {
+		&__item {
+			&--text {
+				font-size: $xlarge-p;
+			}
+
+			&--title {
+				font-size: $xlarge-p;
+			}
+
+			&--description {
+				font-size: $xlarge-p;
+			}
 		}
 	}
 }

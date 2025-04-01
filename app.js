@@ -33,9 +33,9 @@ app.use(
 				scriptSrc: ["'self'", 'https://unpkg.com'], // Allow scripts from unpkg
 				imgSrc: [
 					"'self'",
-					// 'https://lezebre.lu',
 					'https://raw.githubusercontent.com', // GitHub raw content
-					'https://githubusercontent.com', // Dodatkowy alias GitHub
+					'https://githubusercontent.com', // GitHubusercontent
+					'https://github.com', // Dodatkowo dodaj GitHub, jeśli to konieczne
 				],
 			},
 		},
