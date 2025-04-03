@@ -767,21 +767,21 @@ hr {
 
 // PROBLEM Z LINKAMI DLA IOS
 
-button a {
+.button {
 	color: $black !important; /* Wymuszenie koloru */
 	text-decoration: none; /* Usunięcie domyślnego podkreślenia */
 	-webkit-tap-highlight-color: transparent; /* Uniknięcie zmiany koloru po tapnięciu */
 }
 
 @media (prefers-color-scheme: dark) {
-	button a {
+	.button {
 		color: $white !important; /* Dopasowanie do ciemnego trybu */
 	}
 }
 
-button a:visited,
-button a:focus,
-button a:active {
+.button a:visited,
+.button a:focus,
+.button a:active {
 	color: $black !important;
 }
 

@@ -725,20 +725,20 @@ hr {
   margin: 20px auto;
 }
 
-button a {
+.button {
   color: #1c1b17 !important; /* Wymuszenie koloru */
   text-decoration: none; /* Usunięcie domyślnego podkreślenia */
   -webkit-tap-highlight-color: transparent; /* Uniknięcie zmiany koloru po tapnięciu */
 }
 
 @media (prefers-color-scheme: dark) {
-  button a {
+  .button {
     color: #ffffff !important; /* Dopasowanie do ciemnego trybu */
   }
 }
-button a:visited,
-button a:focus,
-button a:active {
+.button a:visited,
+.button a:focus,
+.button a:active {
   color: #1c1b17 !important;
 }
 
