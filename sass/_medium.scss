@@ -119,5 +119,11 @@
 				font-size: $xlarge-p;
 			}
 		}
+
+		&__nothing {
+			&--img {
+				height: 70vh;
+			}
+		}
 	}
 }

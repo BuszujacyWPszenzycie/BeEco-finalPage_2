@@ -121,5 +121,21 @@
 				font-size: $large-p;
 			}
 		}
+		&__nothing {
+			flex-direction: row-reverse;
+			&--img {
+				height: 80vh;
+				width: 50vw;
+			}
+
+			&--titleWrapper {
+				display: flex;
+				justify-content: center;
+				align-items: flex-end;
+				flex-direction: column;
+				text-align: end;
+				height: 80vh;
+			}
+		}
 	}
 }

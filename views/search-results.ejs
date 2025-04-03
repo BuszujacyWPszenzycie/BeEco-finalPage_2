@@ -51,12 +51,21 @@
             <% } else { %>
               <div class="results__nothing">
                 <div class="results__nothing--img"></div>
-                <h3 class="results__nothing--title">Niestety, nic nie znalazłem!
-                </h3>
-                <h3 class="results__nothing--title">Spróbuj użyć innych słów kluczowych.</h3>
+                <div class="results__nothing--titleWrapper">
+                  <h3 class="results__nothing--title">Niestety, nic nie znalazłem!
+                  </h3>
+                  <h3 class="results__nothing--title">Spróbuj użyć innych słów kluczowych.</h3>
+                </div>
+
               </div>
 
               <% } %>
+
+                <div class="results__buttonWrapper">
+                  <a href="/" class="results__link">
+                    <button class="results__button button">Powrót</button>
+                  </a>
+                </div>
 
     </section>
 

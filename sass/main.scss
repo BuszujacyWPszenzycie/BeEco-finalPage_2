@@ -741,11 +741,17 @@ body {
 		}
 
 		&--title {
-			// background-color: blue;
 			font-size: $basic-h3;
 			padding: 1rem;
 			width: 90%;
 		}
+	}
+
+	&__button {
+		// position: absolute;
+		@include btn;
+		width: 80vw;
+		max-width: 1000px;
 	}
 }
 
