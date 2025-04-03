@@ -773,12 +773,6 @@ hr {
 	-webkit-tap-highlight-color: transparent; /* Uniknięcie zmiany koloru po tapnięciu */
 }
 
-@media (prefers-color-scheme: dark) {
-	.button {
-		color: $white !important; /* Dopasowanie do ciemnego trybu */
-	}
-}
-
 .button a:visited,
 .button a:focus,
 .button a:active {
