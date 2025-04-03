@@ -616,17 +616,29 @@ body {
 	&__section {
 		min-height: 100vh;
 		max-width: 1200px;
-
-		// padding: 3rem;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 	}
 
+	&__title {
+		font-size: $basic-h4;
+		margin: 2rem;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		width: 80%;
+		text-align: center;
+		border-bottom: 1px solid (rgba(0, 0, 0, 0.3));
+
+		&--keyWord {
+			text-transform: uppercase;
+		}
+	}
+
 	&__item {
-		width: 90%;
-		height: 50vh;
+		width: 80%;
+		height: 40vh;
 		border-radius: 10px;
 		margin: 2rem;
 		display: flex; // Aktywuje flexbox dla dzieci

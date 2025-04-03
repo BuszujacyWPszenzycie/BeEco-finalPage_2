@@ -3,7 +3,12 @@
   <div class="results__wrapper">
 
     <section class="section results__section">
+
       <% if (foundItems.length> 0) { %>
+        <h4 class="results__title">Wyszukiwania dla słowa kluczowego:&nbsp;<span class="results__title--keyWord">
+            <%= searchValue %>
+          </span>
+        </h4>
         <% foundItems.forEach(item=> { %>
 
           <div class="results__item">
@@ -52,35 +57,6 @@
               </div>
 
               <% } %>
-                <!-- <div class="results__item">
-
-      <div class="results__item--top">
-
-        <div class="results__item--imgWrapper">
-          <div class="results__item--secondImgWrapper">
-            <img class="results__item--img"
-              src="https://github.com/BuszujacyWPszenzycie/BeEco_images/blob/main/1_PrincePolo_mleczne_XXL.png?raw=true"
-              alt="">
-
-
-          </div>
-        </div>
-        <div class="results__item--topText">
-          <p class="results__item--name results__item--text"><strong>Nazwa:&nbsp;</strong>Butelka plastikowa</p>
-          <p class="results__item--type results__item--text"><strong>Typ:&nbsp;</strong> Plastik</p>
-          <p class="results__item--localization results__item--text"><strong>Lokalizacja:&nbsp;</strong>Poznań</p>
-          <p class="results__item--tags results__item--text"><strong>Tagi:&nbsp;</strong>Sport, Eko</p>
-        </div>
-
-      </div>
-
-      <div class="results__item--bottom">
-        <h6 class="results__item--title">Co zrobić z odpadem?</h6>
-        <p class="results__item--description">Wafelelka proponuję zjeść natomiast opakowanie należy wrzucić do żółtego
-          pojemnika przeznaczonego na plastik i metale. Jeżeli nie damy rady zjeść całego wafelka, wtedy radzę zostawić
-          go na później. Jeżeli to także nie jest możliwe należy go wrzucić do pojemnika na śmieci zmieszane.</p>
-      </div>
-    </div> -->
 
     </section>
 
