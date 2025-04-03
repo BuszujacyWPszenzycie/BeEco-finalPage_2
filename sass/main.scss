@@ -755,122 +755,6 @@ body {
 	}
 }
 
-// RESULTS
-
-// .results {
-// 	&__section {
-// 		min-height: 100vh;
-// 		background-color: $gray;
-// 		display: flex;
-// 		flex-direction: column;
-// 		justify-content: center;
-// 		align-items: center;
-// 	}
-
-// 	&__introductionWrapper {
-// 		display: flex;
-// 		flex-direction: column;
-// 		justify-content: start;
-// 		align-items: flex-start;
-// 	}
-
-// 	&__introduction {
-// 		padding: 1rem;
-// 		font-size: $basic-h5;
-// 	}
-
-// 	&__searchValue {
-// 		font-weight: bold;
-// 		text-transform: uppercase;
-// 		color: $main-green;
-// 	}
-
-// 	&__itemsWrapper {
-// 		height: 100%;
-// 		width: 100%;
-// 		display: flex;
-// 		flex-direction: column;
-// 		align-items: center;
-// 		justify-content: center;
-// 		max-width: 1200px;
-// 	}
-
-// 	&__textWrapper {
-// 		padding: 1rem;
-// 	}
-
-// 	&__item {
-// 		margin-top: 2rem;
-// 		padding: 1rem;
-// 		border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-// 		display: flex;
-// 		flex-direction: column;
-// 		align-items: center;
-
-// 		&--image {
-// 			width: 80%;
-// 			height: auto;
-// 			background-position: center;
-// 			background-repeat: no-repeat;
-// 			background-size: cover;
-// 			box-shadow: 11px 9px 43px 7px rgba(28, 27, 23, 0.3);
-// 			border: 1px solid rgba(28, 27, 23, 0.3);
-// 		}
-
-// 		&--name {
-// 			margin-top: 1rem;
-// 			font-size: $basic-h5;
-// 		}
-
-// 		&--type {
-// 			margin-top: 1rem;
-// 			font-size: $basic-p;
-// 		}
-
-// 		&--description {
-// 			margin-top: 1rem;
-// 			font-size: $basic-p;
-// 		}
-
-// 		&--tags {
-// 			margin-top: 1rem;
-// 			font-size: $basic-p;
-// 		}
-
-// 		&--localization {
-// 			margin-top: 1rem;
-// 			font-size: $basic-p;
-// 		}
-// 	}
-
-// 	&__link {
-// 		text-decoration: none;
-// 		width: 100vw;
-// 		display: flex;
-// 		// justify-content: center;
-// 		align-items: center;
-// 	}
-
-// 	&__buttonWrapper {
-// 		width: 100%;
-// 		display: flex;
-// 		// background-color: rebeccapurple;
-// 		align-items: center;
-// 		justify-content: center;
-// 		cursor: pointer;
-// 		transition: transform 0.6s ease, color 0.6s ease;
-// 		margin: 3rem;
-// 	}
-
-// 	&__button {
-// 		@include btn;
-// 		display: block;
-// 		max-width: 1100px;
-// 		width: 90%; // lub width: fit-content;
-// 		margin: auto; // jeśli szerokość nie jest 100%
-// 	}
-// }
-
 hr {
 	// opacity: 1;
 	display: block;
@@ -879,6 +763,20 @@ hr {
 	background: rgba(0, 0, 0, 0.3);
 	width: 100vw;
 	margin: 20px auto;
+}
+
+// PROBLEM Z LINKAMI DLA IOS
+
+button a {
+	color: $black !important; /* Wymuszenie koloru */
+	text-decoration: none; /* Usunięcie domyślnego podkreślenia */
+	-webkit-tap-highlight-color: transparent; /* Uniknięcie zmiany koloru po tapnięciu */
+}
+
+@media (prefers-color-scheme: dark) {
+	button a {
+		color: $white !important; /* Dopasowanie do ciemnego trybu */
+	}
 }
 
 // MEDIA
