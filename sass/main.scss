@@ -779,6 +779,12 @@ button a {
 	}
 }
 
+button a:visited,
+button a:focus,
+button a:active {
+	color: $black !important;
+}
+
 // MEDIA
 
 @import 'small';

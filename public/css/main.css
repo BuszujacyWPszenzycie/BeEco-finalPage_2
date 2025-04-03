@@ -736,6 +736,12 @@ button a {
     color: #ffffff !important; /* Dopasowanie do ciemnego trybu */
   }
 }
+button a:visited,
+button a:focus,
+button a:active {
+  color: #1c1b17 !important;
+}
+
 @media (min-width: 576px) {
   .header__title {
     font-size: 4.2rem;
