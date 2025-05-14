@@ -23,77 +23,84 @@ exports.getAllItems = (req, res) => {
 }
 
 exports.getResults = (req, res) => {
-	const searchValue = req.query.searchValue?.trim() // Pobranie wartości i usunięcie białych znaków
+	const searchValue = req.query.searchValue?.trim()
+	if (!searchValue) {
+		return res.render('search-results', {
+			pageTitle: 'Twoje wyszukania',
+			foundItems: [],
+			searchValue: '',
+		})
+	}
 
-	const query = searchValue
-		? {
-				$or: [
-					{ itemName: new RegExp(searchValue, 'i') },
-					{ itemType: new RegExp(searchValue, 'i') },
-					{ itemDescription: new RegExp(searchValue, 'i') },
-					{ itemLocalization: new RegExp(searchValue, 'i') },
-					{ itemTags: new RegExp(searchValue, 'i') },
-				],
-		  }
-		: {} // Jeśli brak searchValue, zwracamy wszystkie elementy
+	// Lista możliwych pól do przeszukiwania
+	const searchableFields = ['itemName', 'itemType', 'itemDescription', 'itemLocalization', 'itemTags']
+
+	// Filtrujemy tylko te, które zostały przesłane jako checkboxy
+	const enabledFields = searchableFields.filter(field => req.query[field] !== undefined)
+
+	// Jeśli żaden checkbox nie był zaznaczony — nie szukamy
+	if (enabledFields.length === 0) {
+		return res.render('search-results', {
+			pageTitle: 'Twoje wyszukania',
+			foundItems: [],
+			searchValue,
+		})
+	}
+
+	// Budujemy dynamiczne zapytanie z użyciem RegExp dla każdego zaznaczonego pola
+	const query = {
+		$or: enabledFields.map(field => ({
+			[field]: new RegExp(searchValue, 'i'),
+		})),
+	}
 
 	Item.find(query)
 		.then(results => {
-			res.render('search-results', { pageTitle: 'Twoje wyszukania', foundItems: results, searchValue })
+			res.render('search-results', {
+				pageTitle: 'Twoje wyszukania',
+				foundItems: results,
+				searchValue,
+			})
 		})
 		.catch(error => {
 			console.error('Błąd podczas wyszukiwania:', error)
 			res.status(500).json({ message: 'Wystąpił błąd serwera' })
 		})
 }
+exports.getResults = (req, res) => {
+	const searchValue = req.query.searchValue?.trim()
 
-// exports.getSearchResults = (req, res, next) => {
-// 	res.render('search-results', {
-// 		path: '/search-results',
-// 		pageTitle: 'Wyniki wyszukiwania',
-// 	})
-// }
+	// Lista możliwych pól do przeszukiwania (zgodnie z nazwami checkboxów i polami w bazie)
+	const searchableFields = ['itemName', 'itemType', 'itemDescription', 'itemLocalization', 'itemTags']
 
-// SEARCH ITEMS
+	// Filtrujemy tylko te checkboxy, które były zaznaczone i przesłane w zapytaniu
+	const enabledFields = searchableFields.filter(field => req.query[field] !== undefined)
 
-// exports.searchItems = (req, res, next) => {
-// 	const searchQuery = req.query.q // Get the search query from the URL
-// 	const page = parseInt(req.query.page) || 1 // Get the current page from the URL, default to 1
-// 	const limit = 10 // Number of items per page
-// 	const skip = (page - 1) * limit // Calculate the number of items to skip
+	let query = {}
 
-// 	// If search query is empty or not provided, return all items
-// 	let searchCondition = {}
+	if (searchValue && enabledFields.length > 0) {
+		// Główne zapytanie jeśli wpisano coś i są zaznaczone pola
+		query = {
+			$or: enabledFields.map(field => ({
+				[field]: new RegExp(searchValue, 'i'),
+			})),
+		}
+	}
 
-// 	if (searchQuery && searchQuery.trim() !== '') {
-// 		const regex = new RegExp(searchQuery, 'i') // Create a case-insensitive regular expression
-// 		searchCondition = {
-// 			$or: [{ itemName: { $regex: regex } }, { itemType: { $regex: regex } }, { description: { $regex: regex } }],
-// 		}
-// 	}
+	// Jeśli nie wpisano nic — pobierz wszystkie
+	// Jeśli wpisano coś, ale żaden checkbox nie był zaznaczony — zwróć pustą listę
+	const queryPromise = !searchValue ? Item.find({}) : enabledFields.length > 0 ? Item.find(query) : Promise.resolve([])
 
-// 	// Fetch items with pagination
-// 	Item.find(searchCondition)
-// 		.skip(skip)
-// 		.limit(limit)
-// 		.then(items => {
-// 			// Count total items to calculate the number of pages
-// 			return Item.countDocuments(searchCondition).then(totalItems => {
-// 				const totalPages = Math.ceil(totalItems / limit)
-
-// 				// Render the view with pagination information
-// 				res.render('search-results', {
-// 					path: '/search',
-// 					pageTitle: 'Search Results',
-// 					items: items, // Pass the found items to the view
-// 					searchQuery: searchQuery || '', // Send back the query to show in the view if needed
-// 					currentPage: page, // Current page number
-// 					totalPages: totalPages, // Total number of pages
-// 				})
-// 			})
-// 		})
-// 		.catch(err => {
-// 			console.error(err)
-// 			res.status(500).send('An error occurred while searching.')
-// 		})
-// }
+	queryPromise
+		.then(results => {
+			res.render('search-results', {
+				pageTitle: 'Twoje wyszukania',
+				foundItems: results,
+				searchValue,
+			})
+		})
+		.catch(error => {
+			console.error('Błąd podczas wyszukiwania:', error)
+			res.status(500).json({ message: 'Wystąpił błąd serwera' })
+		})
+}

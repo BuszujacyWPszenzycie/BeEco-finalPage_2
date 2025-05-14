@@ -297,8 +297,6 @@ body {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		// border-top: 1px solid rgba(96, 115, 111, 0.5);
-		// border-bottom: 1px solid rgba(96, 115, 111, 0.5);
 	}
 
 	&__engine {
@@ -310,6 +308,52 @@ body {
 
 	&__image {
 		display: none;
+	}
+
+	&__filter {
+		&--wrapper {
+			border: 1px solid rgba(96, 115, 111, 0.2);
+			background-color: $gray;
+			border-radius: 5px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		&--title {
+			margin-top: 1rem;
+			font-size: $basic-h5;
+		}
+	}
+
+	&__checkboxes {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 90vw;
+		height: 80px;
+		gap: 20px; /* odstęp między polami */
+	}
+
+	&__checkbox {
+		&--wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 6px; /* odstęp między labelką a checkboxem */
+		}
+
+		&--label {
+			font-size: $basic-h6;
+		}
+
+		&--input {
+			accent-color: $image-gray;
+			width: 20px;
+			height: 20px;
+		}
 	}
 
 	&__input {
