@@ -725,6 +725,18 @@ hr {
   margin: 20px auto;
 }
 
+.button {
+  color: #1c1b17 !important; /* Wymuszenie koloru */
+  text-decoration: none; /* Usunięcie domyślnego podkreślenia */
+  -webkit-tap-highlight-color: transparent; /* Uniknięcie zmiany koloru po tapnięciu */
+}
+
+.button a:visited,
+.button a:focus,
+.button a:active {
+  color: #1c1b17 !important;
+}
+
 @media (min-width: 576px) {
   .header__title {
     font-size: 4.2rem;
