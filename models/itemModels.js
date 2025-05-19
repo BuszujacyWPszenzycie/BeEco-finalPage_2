@@ -23,9 +23,6 @@ const trashSchema = new Schema({
 		type: String,
 		required: true,
 	},
-	itemTags: {
-		type: String,
-	},
 })
 
 module.exports = mongoose.model('Item', trashSchema)

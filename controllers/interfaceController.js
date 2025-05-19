@@ -32,7 +32,6 @@ exports.getResults = (req, res) => {
 					{ itemType: new RegExp(searchValue, 'i') },
 					{ itemDescription: new RegExp(searchValue, 'i') },
 					{ itemLocalization: new RegExp(searchValue, 'i') },
-					{ itemTags: new RegExp(searchValue, 'i') },
 				],
 		  }
 		: {} // Jeśli brak searchValue, zwracamy wszystkie elementy
