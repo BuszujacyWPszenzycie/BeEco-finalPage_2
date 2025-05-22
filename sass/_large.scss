@@ -45,6 +45,17 @@
 		}
 	}
 
+	.cookies {
+		&__title {
+			font-size: $large-h5;
+		}
+
+		&__button {
+			// height: 50px;
+			font-size: $large-h5;
+		}
+	}
+
 	.search {
 		&__section {
 			height: 70vh;

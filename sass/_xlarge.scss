@@ -63,6 +63,17 @@
 		}
 	}
 
+	.cookies {
+		&__title {
+			font-size: $xlarge-h5;
+		}
+
+		&__button {
+			height: 50px;
+			font-size: $xlarge-h5;
+		}
+	}
+
 	.search {
 		&__section {
 			min-height: 50vh;

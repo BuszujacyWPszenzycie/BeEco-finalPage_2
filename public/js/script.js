@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	const subject = document.querySelector("input[name='subject']")
 	const email = document.querySelector("input[name='email']")
 	const contactText = document.querySelectorAll('.contact__text')
-	console.log(contactText)
 
 	form.addEventListener('submit', function (event) {
 		let isValid = true
@@ -103,23 +102,3 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})
 })
-
-// COOKIE BOX
-
-// const cookieBox = document.querySelector('.cookie__box')
-// const cookieBtn = document.querySelector('.cookie__btn')
-
-// const showCookie = () => {
-// 	const cookieEten = localStorage.getItem('cookie')
-// 	if (cookieEten) {
-// 		cookieBox.classList.add('hide')
-// 	}
-// }
-
-// const handleCookieBox = () => {
-// 	localStorage.setItem('cookie', 'true')
-// 	cookieBox.classList.add('hide')
-// }
-
-// cookieBtn.addEventListener('click', handleCookieBox)
-// showCookie()

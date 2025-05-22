@@ -429,6 +429,7 @@ body {
 // FOOTER
 
 .footer {
+	position: relative;
 	height: 20vh;
 	width: 100vw;
 	background-color: $input-green;
@@ -486,6 +487,45 @@ body {
 		text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
 	}
 }
+
+// COOKIES
+
+.cookies {
+	&__wrapper {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.9);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 2rem;
+		z-index: 10;
+	}
+
+	&__title {
+		color: $white;
+		font-size: $basic-h5;
+		line-height: 1.5;
+		margin: 2rem;
+	}
+
+	&__button {
+		@include btn;
+		width: 80%;
+		height: 30px;
+		font-size: $basic-h5;
+	}
+
+	&__hide {
+		display: none;
+	}
+}
+
 
 // THANKS
 

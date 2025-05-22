@@ -384,6 +384,7 @@ body {
 }
 
 .footer {
+  position: relative;
   height: 20vh;
   width: 100vw;
   background-color: #314a46;
@@ -432,6 +433,57 @@ body {
   white-space: nowrap; /* Prevents individual items from wrapping */
   overflow-wrap: normal; /* Ensures proper word breaking */
   text-overflow: ellipsis; /* Optional: truncates long text with ellipsis */
+}
+
+.cookies__wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  z-index: 10;
+}
+.cookies__title {
+  color: #ffffff;
+  font-size: 1.563rem;
+  line-height: 1.5;
+  margin: 2rem;
+}
+.cookies__button {
+  width: 90vw;
+  height: 40px;
+  font-family: inherit;
+  font-weight: bold;
+  background-color: #f5ff78;
+  border-radius: 5px;
+  border: none;
+  margin: 2rem;
+  transition: opacity 0.4s, transform 0.4s;
+  cursor: pointer;
+  font-size: 1.563rem;
+  width: 80%;
+  height: 30px;
+  font-size: 1.563rem;
+}
+.cookies__button:hover {
+  opacity: 0.85;
+}
+.cookies__button:active {
+  transform: scale(1.05);
+}
+.cookies__button:focus {
+  outline: none;
+  background-color: #e4f225;
+}
+.cookies__hide {
+  display: none;
 }
 
 .thanks__section {
@@ -765,6 +817,13 @@ hr {
   .footer__textWrapper {
     font-size: 1.35rem;
   }
+  .cookies__title {
+    font-size: 1.7rem;
+  }
+  .cookies__button {
+    height: 40px;
+    font-size: 1.7rem;
+  }
   .thanks__title {
     font-size: 2.7rem;
   }
@@ -843,6 +902,13 @@ hr {
   .footer__textWrapper {
     font-size: 1.48rem;
   }
+  .cookies__title {
+    font-size: 1.87rem;
+  }
+  .cookies__button {
+    height: 50px;
+    font-size: 1.87rem;
+  }
   .thanks__title {
     font-size: 2.97rem;
   }
@@ -898,6 +964,12 @@ hr {
   }
   .nav__desktop {
     display: block;
+  }
+  .cookies__title {
+    font-size: 2.06rem;
+  }
+  .cookies__button {
+    font-size: 2.06rem;
   }
   .search__section {
     height: 70vh;
@@ -1016,6 +1088,13 @@ hr {
   }
   .about__item--bottom {
     font-size: 2.87rem;
+  }
+  .cookies__title {
+    font-size: 2.26rem;
+  }
+  .cookies__button {
+    height: 50px;
+    font-size: 2.26rem;
   }
   .search__section {
     min-height: 50vh;

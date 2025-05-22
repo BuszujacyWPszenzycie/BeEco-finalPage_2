@@ -77,6 +77,17 @@
 		}
 	}
 
+	.cookies {
+		&__title {
+			font-size: $medium-h5;
+		}
+
+		&__button {
+			height: 50px;
+			font-size: $medium-h5;
+		}
+	}
+
 	.thanks {
 		&__title {
 			font-size: $medium-h3;
