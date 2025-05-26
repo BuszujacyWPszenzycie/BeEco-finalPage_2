@@ -66,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	const subject = document.querySelector("input[name='subject']")
 	const email = document.querySelector("input[name='email']")
 	const contactText = document.querySelectorAll('.contact__text')
-	console.log(contactText)
 
 	form.addEventListener('submit', function (event) {
 		let isValid = true
