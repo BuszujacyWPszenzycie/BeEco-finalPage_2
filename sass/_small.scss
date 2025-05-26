@@ -37,6 +37,14 @@
 		}
 	}
 
+	.search {
+		&__checkbox {
+			&--label {
+				font-size: $small-h6;
+			}
+		}
+	}
+
 	.footer {
 		&__icon {
 			font-size: $small-h2;

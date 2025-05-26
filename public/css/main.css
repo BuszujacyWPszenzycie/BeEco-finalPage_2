@@ -795,6 +795,9 @@ hr {
   .about__item--bottom {
     font-size: 2.15rem;
   }
+  .search__checkbox--label {
+    font-size: 1.35rem;
+  }
   .footer__icon {
     font-size: 3.35rem;
   }
@@ -858,6 +861,13 @@ hr {
   .search__button {
     height: 50px;
     font-size: 1.87rem;
+  }
+  .search__checkboxes {
+    height: 100px;
+  }
+  .search__checkbox--label {
+    font-size: 1.48rem;
+    margin-bottom: 1rem;
   }
   .contact__title {
     font-size: 2.37rem;
@@ -954,10 +964,18 @@ hr {
   }
   .search__input {
     width: 500px;
-    margin-bottom: 5rem;
   }
   .search__button {
     width: 500px;
+  }
+  .search__checkboxes {
+    width: 500px;
+  }
+  .search__checkbox {
+    width: 500px;
+  }
+  .search__checkbox--label {
+    font-size: 1.63rem;
   }
   .contact__wrapper {
     display: flex;
@@ -1058,11 +1076,19 @@ hr {
   }
   .search__input {
     height: 50px;
+    width: 700px;
     font-size: 2.26rem;
   }
   .search__button {
     height: 60px;
     font-size: 2.06rem;
+    width: 700px;
+  }
+  .search__checkboxes {
+    width: 700px;
+  }
+  .search__checkbox--label {
+    font-size: 1.79rem;
   }
   .contact__title {
     font-size: 2.87rem;

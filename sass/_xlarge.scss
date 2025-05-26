@@ -70,11 +70,23 @@
 
 		&__input {
 			height: 50px;
+			width: 700px;
 			font-size: $xlarge-h5;
 		}
 
 		&__button {
 			@include btnxLarge;
+			width: 700px;
+		}
+
+		&__checkboxes {
+			width: 700px;
+		}
+
+		&__checkbox {
+			&--label {
+				font-size: $xlarge-h6;
+			}
 		}
 	}
 
