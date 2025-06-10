@@ -26,6 +26,16 @@ const handleCookieWrapper = () => {
 	localStorage.setItem('cookie', 'true')
 	cookiesWrapper.classList.add('cookies__hide')
 	enableScroll()
+
+	// Jeśli był hash zapisany – scrolluj
+	const hash = sessionStorage.getItem('scrollToHashAfterCookies')
+	if (hash) {
+		const target = document.querySelector(hash)
+		if (target) {
+			target.scrollIntoView({ behavior: 'smooth' })
+		}
+		sessionStorage.removeItem('scrollToHashAfterCookies')
+	}
 }
 
 cookiesBtn.addEventListener('click', handleCookieWrapper)
