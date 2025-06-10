@@ -11,52 +11,45 @@ const enableScroll = () => {
 	document.body.style.overflow = ''
 }
 
-const showCookie = () => {
-	const cookiesEaten = localStorage.getItem('cookie')
+// ✅ Obsługa ewentualnego hasha – teraz i po zmianie
+const handleHash = () => {
+	if (window.location.hash && !localStorage.getItem('cookie')) {
+		sessionStorage.setItem('scrollToHashAfterCookies', window.location.hash)
+		history.replaceState(null, '', window.location.pathname)
+	}
+}
 
-	if (!cookiesEaten) {
+// ✅ Przescrolluj po akceptacji cookies
+const handleCookieWrapper = () => {
+	localStorage.setItem('cookie', 'true')
+	cookiesWrapper.classList.add('cookies__hide')
+	enableScroll()
+
+	const hash = sessionStorage.getItem('scrollToHashAfterCookies')
+	if (hash) {
+		const target = document.querySelector(hash)
+		if (target) {
+			// Małe opóźnienie – by mieć pewność, że scroll działa po enableScroll
+			setTimeout(() => {
+				target.scrollIntoView({ behavior: 'smooth' })
+			}, 100)
+		}
+		sessionStorage.removeItem('scrollToHashAfterCookies')
+	}
+}
+
+// ✅ Główna funkcja uruchamiana na starcie
+const showCookie = () => {
+	if (!localStorage.getItem('cookie')) {
 		disableScroll()
+		handleHash() // obsłuż hash od razu
 	} else {
 		cookiesWrapper.classList.add('cookies__hide')
 		enableScroll()
 	}
 }
 
-const handleCookieWrapper = () => {
-	localStorage.setItem('cookie', 'true')
-	cookiesWrapper.classList.add('cookies__hide')
-	enableScroll()
-
-	// Jeśli był hash zapisany – scrolluj
-	const hash = sessionStorage.getItem('scrollToHashAfterCookies')
-	if (hash) {
-		const target = document.querySelector(hash)
-		if (target) {
-			target.scrollIntoView({ behavior: 'smooth' })
-		}
-		sessionStorage.removeItem('scrollToHashAfterCookies')
-	}
-}
-
 cookiesBtn.addEventListener('click', handleCookieWrapper)
+window.addEventListener('hashchange', handleHash) // ← nowy kluczowy fragment
+
 showCookie()
-
-// COOKIE BOX
-
-// const cookieBox = document.querySelector('.cookie__box')
-// const cookieBtn = document.querySelector('.cookie__btn')
-
-// const showCookie = () => {
-// 	const cookieEten = localStorage.getItem('cookie')
-// 	if (cookieEten) {
-// 		cookieBox.classList.add('hide')
-// 	}
-// }
-
-// const handleCookieBox = () => {
-// 	localStorage.setItem('cookie', 'true')
-// 	cookieBox.classList.add('hide')
-// }
-
-// cookieBtn.addEventListener('click', handleCookieBox)
-// showCookie()
