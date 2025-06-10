@@ -95,6 +95,33 @@
         <form class="search__engine" action="/search-results" method="GET">
           <input type="text" class="search__input" placeholder="Wpisz słowa kluczowe" name="searchValue"
             id="searchValue">
+
+          <!-- <h2 class="search__filter">Uwzględnij w wyszukiwaniu</h2> -->
+          <div class="search__filter--wrapper">
+            <h2 class="search__filter--title">Uwzględnij w wyszukiwaniu</h2>
+            <div class="search__checkboxes">
+              <div class="search__checkbox--wrapper">
+                <label for="itemName" class="search__checkbox--label">Nazwa</label>
+                <input type="checkbox" class="search__checkbox--input" id="itemName" name="itemName" checked>
+              </div>
+              <div class="search__checkbox--wrapper">
+                <label for="itemType" class="search__checkbox--label">Typ</label>
+                <input type="checkbox" class="search__checkbox--input" id="itemType" name="itemType" checked>
+              </div>
+              <div class=" search__checkbox--wrapper">
+                <label for="itemLocalization" class="search__checkbox--label">Lokalizacja</label>
+                <input type="checkbox" class="search__checkbox--input" id="itemLocalization" name="itemLocalization"
+                  checked>
+              </div>
+              <div class="search__checkbox--wrapper">
+                <label for="itemDescription" class="search__checkbox--label">Opis</label>
+                <input type="checkbox" class="search__checkbox--input" id="itemDescription" name="itemDescription"
+                  checked>
+              </div>
+            </div>
+          </div>
+
+
           <button class="search__button button">Wyszukaj!</button>
         </form>
 

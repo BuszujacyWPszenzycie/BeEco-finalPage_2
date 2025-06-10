@@ -244,6 +244,42 @@ body {
 .search__image {
   display: none;
 }
+.search__filter--wrapper {
+  border: 1px solid rgba(96, 115, 111, 0.2);
+  background-color: #efefef;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search__filter--title {
+  margin-top: 1rem;
+  font-size: 1.563rem;
+}
+.search__checkboxes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 90vw;
+  height: 80px;
+  gap: 20px; /* odstęp między polami */
+}
+.search__checkbox--wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px; /* odstęp między labelką a checkboxem */
+}
+.search__checkbox--label {
+  font-size: 1.25rem;
+}
+.search__checkbox--input {
+  accent-color: #a4a4a2;
+  width: 20px;
+  height: 20px;
+}
 .search__input {
   width: 90vw;
   height: 40px;
@@ -811,6 +847,9 @@ hr {
   .about__item--bottom {
     font-size: 2.15rem;
   }
+  .search__checkbox--label {
+    font-size: 1.35rem;
+  }
   .footer__icon {
     font-size: 3.35rem;
   }
@@ -881,6 +920,13 @@ hr {
   .search__button {
     height: 50px;
     font-size: 1.87rem;
+  }
+  .search__checkboxes {
+    height: 100px;
+  }
+  .search__checkbox--label {
+    font-size: 1.48rem;
+    margin-bottom: 1rem;
   }
   .contact__title {
     font-size: 2.37rem;
@@ -990,10 +1036,18 @@ hr {
   }
   .search__input {
     width: 500px;
-    margin-bottom: 5rem;
   }
   .search__button {
     width: 500px;
+  }
+  .search__checkboxes {
+    width: 500px;
+  }
+  .search__checkbox {
+    width: 500px;
+  }
+  .search__checkbox--label {
+    font-size: 1.63rem;
   }
   .contact__wrapper {
     display: flex;
@@ -1101,11 +1155,19 @@ hr {
   }
   .search__input {
     height: 50px;
+    width: 700px;
     font-size: 2.26rem;
   }
   .search__button {
     height: 60px;
     font-size: 2.06rem;
+    width: 700px;
+  }
+  .search__checkboxes {
+    width: 700px;
+  }
+  .search__checkbox--label {
+    font-size: 1.79rem;
   }
   .contact__title {
     font-size: 2.87rem;

@@ -47,6 +47,17 @@
 		&__button {
 			@include btnMedium;
 		}
+
+		&__checkboxes {
+			height: 100px;
+		}
+
+		&__checkbox {
+			&--label {
+				font-size: $medium-h6;
+				margin-bottom: 1rem;
+			}
+		}
 	}
 
 	.contact {

@@ -59,7 +59,6 @@
 	.search {
 		&__section {
 			height: 70vh;
-			// background-color: red;
 			flex-direction: row;
 			justify-content: space-around;
 		}
@@ -78,11 +77,22 @@
 
 		&__input {
 			width: 500px;
-			margin-bottom: 5rem;
 		}
 
 		&__button {
 			width: 500px;
+		}
+
+		&__checkboxes {
+			width: 500px;
+		}
+
+		&__checkbox {
+			width: 500px;
+
+			&--label {
+				font-size: $large-h6;
+			}
 		}
 	}
 
