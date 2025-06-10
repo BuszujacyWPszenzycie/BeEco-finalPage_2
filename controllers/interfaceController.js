@@ -32,18 +32,6 @@ exports.getResults = (req, res) => {
 		})
 	}
 
-<<<<<<< HEAD
-	const query = searchValue
-		? {
-				$or: [
-					{ itemName: new RegExp(searchValue, 'i') },
-					{ itemType: new RegExp(searchValue, 'i') },
-					{ itemDescription: new RegExp(searchValue, 'i') },
-					{ itemLocalization: new RegExp(searchValue, 'i') },
-				],
-		  }
-		: {} // Jeśli brak searchValue, zwracamy wszystkie elementy
-=======
 	// Lista możliwych pól do przeszukiwania
 	const searchableFields = ['itemName', 'itemType', 'itemDescription', 'itemLocalization', 'itemTags']
 
@@ -65,7 +53,6 @@ exports.getResults = (req, res) => {
 			[field]: new RegExp(searchValue, 'i'),
 		})),
 	}
->>>>>>> IVM3
 
 	Item.find(query)
 		.then(results => {
